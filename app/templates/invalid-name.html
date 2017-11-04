@@ -1,21 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
-<img class="phone" src="static/images/the-mole.svg">
-<div class="section get-help values">
+<div class="section values">
   <div class="container">
-    <h3 class="section-heading">You have another name idea?</h3>
-    <p class="section-description">Don't hesitate to submit your favorite and cute name.</p>
+    <h1 class="section-heading">You have another idea?</h1>
+    <img src="/static/images/the-mole.svg">
 
+    <h3 class="section-description">Don't hesitate to submit your favorite and cute name.</h3>
     <form>
-
       <div class="row">
         <div class="six columns">
           <label for="newNameInput">Propose name</label>
-          <input class="u-full-width" placeholder="I propose as the mascot name..." id="newNameInput" type="text">
+          <input class="u-full-width" placeholder="I propose as the mascot name..." id="newNameInput" type="text" required>
         </div>
         <div class="six columns">
           <label for="emailInput">Your email</label>
-          <input class="u-full-width" placeholder="test@mailbox.com" id="exampleEmailInput" type="email">
+          <input class="u-full-width" placeholder="test@mailbox.com" id="exampleEmailInput" type="email" required>
         </div>
       </div>
 
