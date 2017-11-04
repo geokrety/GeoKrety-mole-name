@@ -4,10 +4,12 @@ services:
   geokrety-mole-name:
     build: .
     image: geokrety-mole-name:1.0.0
-    #ports:
+    # ports:
     #  - 8000:8000
-    # volumes:
+    volumes:
     #   - .:/opt/flask
+      - ./database:/opt/flask/database
+      - ./config:/opt/flask/config
     labels:
       - "traefik.enable=true"
       - "traefik.frontend.rule=Host:molename.geokrety.org,molename.gk.kumy.org"

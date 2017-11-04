@@ -3,14 +3,15 @@ MAINTAINER Mathieu Alorent <github@kumy.net>
 
 RUN apt-get update \
     && apt-get install -y \
-        python3-pip \
-        python3-dev \
+        python-pip \
+        python-dev \
         build-essential \
+        git \
     && apt-get clean \
     && rm -fr /var/lib/apt/lists
 
 COPY requirements.txt /tmp/
-RUN pip3 install --requirement /tmp/requirements.txt
+RUN pip install --requirement /tmp/requirements.txt
 COPY . /opt/flask
 
 WORKDIR /opt/flask

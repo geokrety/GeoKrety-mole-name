@@ -1,0 +1,15 @@
+{% extends "single.html" %}
+{% block s_heading %}You have already voted.{% endblock %}
+{% block s_content %}
+    <h3 class="section-description">
+      for <q>{{name}}</q> on {{vote_date}}.
+    </h3>
+
+    {% if not validate_date %}
+    <h4 class="section-description">
+      Be careful you didn't validated your vote!
+    </h4>
+
+    <a class="button button-primary" href="/send-mail-again/{{email}}">Send validation link again</a>
+    {% endif %}
+{% endblock %}

@@ -27,17 +27,22 @@
   <div class="container">
     <h3 class="section-heading">Select your prefered name.</h3>
     <div class="row">
-      {% for name, rate in names.items() %}
+      {% for value in names %}
       <div class="one-third column value mole-name">
-        <h2 class="value-multiplier">{{name}}</h2>
-        <h5 class="value-heading">{{rate}}%</h5>
-        <a class="button button-primary" href="/vote/{{name}}">Vote</a>
+        <h2 class="value-multiplier">{{value.name}}</h2>
+        <h5 class="value-heading">{{'%0.2f'| format(value.rate|float)}}%</h5>
+        <a class="button button-primary" href="/vote/{{value.name}}">Vote</a>
       </div>
       {% if loop.index is divisibleby(3) %}
     </div>
     <div class="row">
       {% endif %}
       {% endfor %}
+    </div>
+    <div class="row">
+      <div class="column value mole-name">
+        <a class="button button-primary" href="/propose-name">Want to propose something else?</a>
+      </div>
     </div>
   </div>
 </div>
