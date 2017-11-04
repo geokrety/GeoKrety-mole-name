@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  geokrety-mole-name:
+    build: .
+    image: geokrety-mole-name:1.0.0
+    ports:
+      - 8000:8000
+    # volumes:
+    #   - .:/opt/flask
+    labels:
+      - "traefik.enable=true"
+      - "traefik.frontend.rule=Host:molename.geokrety.org"
+    #   - "traefik.docker.network=srv_geokrety-front"
+    # networks:
+    #   - front

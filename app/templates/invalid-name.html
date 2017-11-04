@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="section get-help values">
+  <div class="container">
+    <h3 class="section-heading">You have another name idea?</h3>
+    <p class="section-description">Don't hesitate to submit your favorite and cute name.</p>
+
+    <form>
+
+      <div class="row">
+        <div class="six columns">
+          <label for="newNameInput">Propose name</label>
+          <input class="u-full-width" placeholder="I propose as the mascot name..." id="newNameInput" type="text">
+        </div>
+        <div class="six columns">
+          <label for="emailInput">Your email</label>
+          <input class="u-full-width" placeholder="test@mailbox.com" id="exampleEmailInput" type="email">
+        </div>
+      </div>
+
+      <input class="button-primary u-max-full-width" value="Propose" type="submit">
+    </form>
+  </div>
+</div>
+{% endblock %}

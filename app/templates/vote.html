@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block content %}
+<div class="section get-help values">
+  <div class="container">
+    <h3 class="section-heading">You're one step close to finish.</h3>
+    <p class="section-description">Please enter your email and click the link in the mail you will receive to validate your choice.</p>
+
+    <p>You have selected: {{name}}</p>
+    <form>
+      <label for="emailInput">Your email</label>
+      <input class="u-full-width" placeholder="test@mailbox.com" id="exampleEmailInput" type="email">
+
+      <input class="button-primary u-max-full-width" value="Send me the validation link" type="submit">
+    </form>
+  </div>
+</div>
+{% endblock %}
