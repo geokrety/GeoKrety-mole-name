@@ -1,50 +1,52 @@
-{% extends "base.html" %}
-
-{% block content %}
-  <div class="section hero">
-    <div class="container">
-      <div class="row">
-        <div class="one-half column">
-          <h4 class="hero-heading">Do you know the GeoKrety mascot name?</h4>
-          <a class="button button-primary" href="#opinion">No? Normal, It doesn't have one yet!</a>
-        </div>
-        <div class="one-half column phones">
-          <img class="phone" src="static/images/the-mole.svg">
-        </div>
+{% extends "base.html" %} {% block content %}
+<div class="section hero">
+  <div class="container">
+    <div class="row">
+      <div class="one-half column">
+        <h4 class="hero-heading">Do you know the GeoKrety mascot name?</h4>
+        <a class="button button-primary" href="#opinion">No? Normal, It doesn't have one yet!</a>
+      </div>
+      <div class="one-half column phones">
+        <img class="phone" src="/static/images/the-mole.svg">
       </div>
     </div>
   </div>
+</div>
 
-  <a id="opinion"></a>
-  <div class="section get-help values">
-    <div class="container">
-      <h3 class="section-heading">We need your opinion to choose one!</h3>
-      <p class="section-description">GeoKrety is nothing without you, and as a community we hear your voice. Make GeoKrety yours and vote for your favorite name!</p>
-      <a class="button button-primary" href="#vote">I want to vote!</a>
-    </div>
+<a id="opinion"></a>
+<div class="section get-help values">
+  <div class="container">
+    <h3 class="section-heading">We need your opinion to choose one!</h3>
+    <p class="section-description">GeoKrety is nothing without you, and as a community we hear your voice. Make GeoKrety yours and vote for your favorite name!</p>
+    <a class="button button-primary" href="#vote">I want to vote!</a>
   </div>
+</div>
 
-  <a id="vote"></a>
-  <div class="section">
-    <div class="container">
-      <h3 class="section-heading">Select your prefered name.</h3>
-      <div class="row">
-        {% for name, rate in names.items() %}
-        <div class="one-third column value">
-          <h2 class="value-multiplier">{{name}}</h2>
-          <h5 class="value-heading">{{rate}}%</h5>
-          <a class="button button-primary" href="/vote/{{name}}"><i class="redheart">&hearts;</i> Vote</a>
-        </div>
-        {% endfor %}
+<a id="vote"></a>
+<div class="section">
+  <div class="container">
+    <h3 class="section-heading">Select your prefered name.</h3>
+    <div class="row">
+      {% for name, rate in names.items() %}
+      <div class="one-third column value mole-name">
+        <h2 class="value-multiplier">{{name}}</h2>
+        <h5 class="value-heading">{{rate}}%</h5>
+        <a class="button button-primary" href="/vote/{{name}}">Vote</a>
       </div>
+      {% if loop.index is divisibleby(3) %}
+    </div>
+    <div class="row">
+      {% endif %}
+      {% endfor %}
     </div>
   </div>
+</div>
 
-  <div class="section categories">
-    <div class="container">
-      <h3 class="section-heading">Other community poll</h3>
-      <p class="section-description">We are also looking for your help for designing a nice official KretyCoin to celebrate our 10th aniversary.</p>
-      <a class="button button-primary" href="https://coins.geokrety.org">Let me give my opinion</a>
-    </div>
+<div class="section categories">
+  <div class="container">
+    <h3 class="section-heading">Other community poll</h3>
+    <p class="section-description">We are also looking for your help for designing a nice official KretyCoin to celebrate our 10th aniversary.</p>
+    <a class="button button-primary" href="https://coins.geokrety.org">Let me give my opinion</a>
   </div>
+</div>
 {% endblock %}

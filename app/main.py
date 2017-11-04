@@ -5,11 +5,11 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 NAMES = {
     'GraKi': 24,
-    'GoKou': 24,
-    'GeyKee': 24,
-    'GeoKey': 24,
-    'GieneK': 24,
-    'GeeKay': 24,
+    'GieneK': 20,
+    'GeyKee': 16,
+    'GeoKey': 12,
+    'GoKou': 8,
+    'GeeKay': 1,
 }
 
 @app.route('/skeleton/<path:path>')
