@@ -9,6 +9,7 @@ We distribute a `Dockerfile` and `docker-compose.yml` to help you start.
 1. You need to have [`docker`](https://docs.docker.com/engine/installation/) installed.
 1. You need to have [`docker-compose`](https://docs.docker.com/compose/install/) installed.
 1. Clone the project `git clone https://github.com/geokrety/GeoKrety-mole-name.git`.
+1. Copy `config/custom.example.conf` to `config/custom.conf`, and adjust to your needs.
 1. Build the docker image `docker-compose build`.
 1. Launch the container `docker-compose up -d`.
 
