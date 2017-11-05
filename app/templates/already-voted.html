@@ -19,6 +19,6 @@
     <h4 class="section-description">
       {{_('Be careful you didn\'t validated your vote!')}}
     </h4>
-    <a class="button button-primary" href="/send-mail-again/{{email}}">{{_('Send validation link again')}}</a>
+    <a class="button button-primary" href="{{url_for('mail_again', email=email)}}">{{_('Send validation link again')}}</a>
     {% endif %}
 {% endblock %}

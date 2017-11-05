@@ -31,7 +31,7 @@
       <div class="one-third column value mole-name">
         <h2 class="value-multiplier">{{value.name}}</h2>
         <h5 class="value-heading">{{'%0.2f'| format(value.rate|float)}}%</h5>
-        <a class="button button-primary" href="/vote/{{value.name}}">{{_('Vote')}}</a>
+        <a class="button button-primary" href="{{url_for('vote', name=value.name)}}">{{_('Vote')}}</a>
       </div>
       {% if loop.index is divisibleby(3) %}
     </div>
@@ -41,7 +41,7 @@
     </div>
     <div class="row">
       <div class="column value mole-name">
-        <a class="button button-primary" href="/propose-name">{{_('Want to propose something else?')}}</a>
+        <a class="button button-primary" href="{{url_for('propose_name')}}">{{_('Want to propose something else?')}}</a>
       </div>
     </div>
   </div>

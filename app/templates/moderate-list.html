@@ -5,8 +5,8 @@
 <ul>
   {% for proposition in propositions %}
   <li>
-    <a class="button button-primary" href="/moderate/{{password}}/{{ proposition.id }}/validate">Validate</a>
-    <a class="button button-primary" href="/moderate/{{password}}/{{ proposition.id }}/refuse">Refuse</a>
+    <a class="button button-primary" href="{{url_for('modaration_validate', password=password, id=proposition.id)}}">Validate</a>
+    <a class="button button-primary" href="{{url_for('modaration_refuse', password=password, id=proposition.id)}}">Refuse</a>
     <q>{{ proposition.name }}</q> by <q>{{ proposition.username }}</q> ({{ proposition.email }})
   </li>
   {% endfor %}

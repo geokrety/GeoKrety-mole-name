@@ -4,7 +4,7 @@ import sys
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from flask import render_template
+from flask import render_template, url_for
 from ihih import IHIH
 
 
@@ -55,14 +55,9 @@ class send:
 class sendConfirmation(send):
     def send(self, to, token, name):
         subject = render_template('send-confirmation-subject.html')
-        text = render_template('send-confirmation-text.html', name=name, url='%s/validate/%s' % (
-            self.config.get('SITE_BASE', "https://molename.geokrety.org"),
-            token
-        ))
-        html = render_template('send-confirmation.html', name=name, url='%s/validate/%s' % (
-            self.config.get('SITE_BASE', "https://molename.geokrety.org"),
-            token
-        ))
+        url = self.config.get('SITE_BASE', "https://molename.geokrety.org") + url_for('validate', token=token)
+        text = render_template('send-confirmation-text.html', name=name, url=url)
+        html = render_template('send-confirmation.html', name=name, url=url)
         self._send(to, subject, text, html)
 
 

@@ -71,7 +71,6 @@ def ensure_lang_support():
     if lang_code and lang_code not in app.config['SUPPORTED_LANGUAGES'].keys():
         return abort(404)
 
-
 def get_db():
     db = getattr(g, '_database', None)
     if db is None:
