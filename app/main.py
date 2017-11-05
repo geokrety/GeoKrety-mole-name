@@ -184,6 +184,9 @@ def index():
 @app.route("/vote/<name>", methods=['GET', 'POST'])
 @app.route("/<lang_code>/vote/<name>", methods=['GET', 'POST'])
 def vote(name):
+    if get_config().get('VOTE_STEP') != '3':
+        return redirect(url_for('index'))
+
     # Check name validity
     with app.app_context():
         result = query_db('SELECT * FROM names WHERE name = ?', [name], one=True)
@@ -221,6 +224,9 @@ def vote(name):
 @app.route("/validate/<token>")
 @app.route("/<lang_code>/validate/<token>")
 def validate(token):
+    if get_config().get('VOTE_STEP') != '3':
+        return redirect(url_for('index'))
+
     with app.app_context():
         vote = query_db('SELECT * FROM votes WHERE token = ?', [token], one=True)
     if vote:
@@ -252,6 +258,9 @@ def check_your_mails():
 @app.route("/propose-name", defaults={'name': ''}, methods=['GET', 'POST'])
 @app.route("/<lang_code>/propose-name", defaults={'name': ''}, methods=['GET', 'POST'])
 def propose_name(name):
+    if get_config().get('VOTE_STEP') != '1':
+        return redirect(url_for('index'))
+
     email = ''
     username = ''
     if request.method == 'POST':
@@ -281,6 +290,9 @@ def propose_name(name):
 @app.route("/send-mail-again/<email>")
 @app.route("/<lang_code>/send-mail-again/<email>")
 def mail_again(email):
+    if get_config().get('VOTE_STEP') != '3':
+        return redirect(url_for('index'))
+
     with app.app_context():
         vote = query_db('SELECT * FROM votes WHERE email = ?', [email], one=True)
     if vote and vote['validate_datetime']:
