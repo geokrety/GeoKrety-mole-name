@@ -185,7 +185,7 @@ def vote(name):
         result = query_db('SELECT * FROM names WHERE name = ?', [name], one=True)
     if not result:
         # return render_template('invalid-name.html', name=name)
-        return redirect('/propose-name/%s' % name)
+        return redirect(url_for('propose_name', name=name))
 
     # Save user vote
     if request.method == 'POST':
@@ -285,14 +285,15 @@ def mail_again(email):
         s = sendConfirmation().send(email, vote['token'], vote['name'])
         return render_template('check-your-mails.html')
 
-    return redirect('/')
+    return redirect(url_for('index'))
 
 
 @app.route("/moderate/<password>")
-def modaration_list(password):
+@app.route("/<lang_code>/moderate/<password>")
+def moderation_list(password):
     config = get_config()
     if password != config.get('ADMIN_PASSWORD'):
-        return redirect('/')
+        return redirect(url_for('index'))
 
     with app.app_context():
         propositions = query_db('SELECT * FROM proposed_names', [])
@@ -300,10 +301,11 @@ def modaration_list(password):
 
 
 @app.route("/moderate/<password>/<id>/validate")
+@app.route("/<lang_code>/moderate/<password>/<id>/validate")
 def modaration_validate(password, id):
     config = get_config()
     if password != config.get('ADMIN_PASSWORD'):
-        return redirect('/')
+        return redirect(url_for('index'))
 
     with app.app_context():
         proposition = query_db('SELECT * FROM proposed_names WHERE id = ?', [id], one=True)
@@ -313,18 +315,19 @@ def modaration_validate(password, id):
                 return render_template('saving-propose-error.html')
             delete_db('proposed_names', [id])
 
-    return redirect('/moderate/%s' % password)
+    return redirect(url_for('moderation_list', password=password))
 
 
 @app.route("/moderate/<password>/<id>/refuse")
+@app.route("/<lang_code>/moderate/<password>/<id>/refuse")
 def modaration_refuse(password, id):
     config = get_config()
     if password != config.get('ADMIN_PASSWORD'):
-        return redirect('/')
+        return redirect(url_for('index'))
 
     delete_db('proposed_names', [id])
 
-    return redirect('/moderate/%s' % password)
+    return redirect(url_for('moderation_list', password=password))
 
 
 if __name__ == '__main__':
