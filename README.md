@@ -24,3 +24,5 @@ We distribute a `Dockerfile` and `docker-compose.yml` to help you start.
 * Connect to crowdin and upload file
 * Import Translate files into code source tree
 * Compile new translations `docker exec -it geokretymascottname_geokrety-mole-name_1 pybabel compile -d app/translations/`
+
+To initialize a new language, declare it in `app/main.py`, and launch `docker exec -it geokretymascottname_geokrety-mole-name_1 pybabel init -i app/translations/messages.pot -d app/translations -l <lang_code>`

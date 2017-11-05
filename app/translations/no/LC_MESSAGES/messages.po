@@ -1,0 +1,241 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: geokrety\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2017-11-05 19:32+0000\n"
+"PO-Revision-Date: 2017-11-05 14:57-0500\n"
+"Last-Translator: geokrety <geokrety@gmail.com>\n"
+"Language-Team: Norwegian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: geokrety\n"
+"X-Crowdin-Language: no\n"
+"X-Crowdin-File: the_mole_with_no_name.pot\n"
+"Language: no_NO\n"
+
+#: app/templates/already-proposed-error.html:2
+msgid "Thanks for your proposition,"
+msgstr "Tusen takk for forslaget ditt,"
+
+#: app/templates/already-proposed-error.html:4
+msgid "But this name was already proposed."
+msgstr "men dette navnet har allerede blitt foreslått."
+
+#: app/templates/already-voted.html:2
+msgid "You have already voted"
+msgstr "Du har allerede stemt"
+
+#: app/templates/already-voted.html:5
+#, python-format
+msgid "for <q>%(name)s</q> on %(vote_datetime)s"
+msgstr "på <q>%(name)s</q> i %(vote_datetime)s."
+
+#: app/templates/already-voted.html:10
+#, python-format
+msgid "Do you want to change your vote for <q>%(new_name)s"
+msgstr "Har du lyst til å endre stemmen din for <q>%(new_name)s?"
+
+#: app/templates/already-voted.html:16
+msgid "Yes, change my vote"
+msgstr "Ja, endr stemmen min"
+
+#: app/templates/already-voted.html:20
+msgid "Be careful you didn't validated your vote!"
+msgstr "Vær forsiktig, du bekreftet ikke stemmen din!"
+
+#: app/templates/already-voted.html:22
+msgid "Send validation link again"
+msgstr "Send bekreftelseslenke på nytt"
+
+#: app/templates/base.html:9
+msgid "GeoKrety Mascot name"
+msgstr "GeoKrety sitt maskotnavn"
+
+#: app/templates/check-your-mails.html:2
+msgid "Now, check your mails"
+msgstr "Nå, sjekk e-posten din"
+
+#: app/templates/check-your-mails.html:4
+msgid "and clic the validation link."
+msgstr "og klikk på bekreftelseslenken."
+
+#: app/templates/index.html:6
+msgid "Do you know the GeoKrety mascot name?"
+msgstr "Vet du hva GeoKrety sitt maskotnavn er?"
+
+#: app/templates/index.html:7
+msgid "No? Normal, It doesn't have one yet!"
+msgstr "Nei? Forståelig. Den har ikke noe navn ennå!"
+
+#: app/templates/index.html:19
+msgid "We need your opinion to choose one!"
+msgstr "Vi trenger meningen din for å velge et!"
+
+#: app/templates/index.html:20
+msgid "GeoKrety is nothing without you, and as a community we hear your voice. Make GeoKrety yours and vote for your favorite name!"
+msgstr "GeoKrety er ingenting uten deg, og, som et fellesskap, hører vi stemmen din. Gjør GeoKrety ditt og stem på yndlingsnavnet ditt!"
+
+#: app/templates/index.html:21
+msgid "I want to vote!"
+msgstr "Jeg vil stemme!"
+
+#: app/templates/index.html:28
+msgid "Select your prefered name."
+msgstr "Velg yndlingsnavnet ditt."
+
+#: app/templates/index.html:34
+msgid "Vote"
+msgstr "Stem"
+
+#: app/templates/index.html:44
+msgid "Want to propose something else?"
+msgstr "Vil du foreslå noe annet?"
+
+#: app/templates/index.html:52
+msgid "Other community poll"
+msgstr "Andre fellesskapsavstemninger"
+
+#: app/templates/index.html:53
+msgid "We are also looking for your help for designing a nice official KretyCoin to celebrate our 10th aniversary."
+msgstr "Vi ser også etter hjelp til å designe en fin offisiell KretyCoin for å feire det 10. jubileet vårt."
+
+#: app/templates/index.html:54
+msgid "Let me give my opinion"
+msgstr "La meg gi deg meningen min"
+
+#: app/templates/no-such-token.html:2
+msgid "An error occured while saving you vote."
+msgstr "Det oppsto en feil under lagringen av stemmen din."
+
+#: app/templates/no-such-token.html:4
+msgid "Invalid token."
+msgstr "Ugyldig nøkkel."
+
+#: app/templates/propose-name.html:2
+msgid "You have another idea?"
+msgstr "Har du en annen idé?"
+
+#: app/templates/propose-name.html:4
+msgid "Don't hesitate to submit your favorite and cute name."
+msgstr "Ikke nøl med å foreslå et søtt navn du liker."
+
+#: app/templates/propose-name.html:7
+msgid "Name must not be offensive"
+msgstr "Navnet kan ikke være støtende"
+
+#: app/templates/propose-name.html:8
+msgid "Name must contains letters <q>G</q> and <q>K</q> in that order"
+msgstr "Navnet må inneholde bokstavene <q>G</q> og <q>K</q> i den rekkefølgen"
+
+#: app/templates/propose-name.html:14
+msgid "I propose as the mascot name"
+msgstr ""
+
+#: app/templates/propose-name.html:15
+msgid "Some name"
+msgstr "Et eller annet navn"
+
+#: app/templates/propose-name.html:18
+msgid "Your username"
+msgstr "Brukernavnet ditt"
+
+#: app/templates/propose-name.html:19
+msgid "Username"
+msgstr "Brukernavn"
+
+#: app/templates/propose-name.html:22
+msgid "Your email"
+msgstr "E-posten din"
+
+#: app/templates/propose-name.html:27
+msgid "Propose"
+msgstr "Foreslå"
+
+#: app/templates/propose-name.html:29 app/templates/vote.html:12
+msgid "Your mail address will only be used to validate your vote, we will never share it with other parties."
+msgstr ""
+
+#: app/templates/saving-for-review.html:2
+msgid "Thanks!"
+msgstr "Tusen takk!"
+
+#: app/templates/saving-for-review.html:4
+msgid "Your proposition is now waiting for moderation."
+msgstr "Forslaget ditt venter nå på moderering."
+
+#: app/templates/saving-propose-error.html:2
+msgid "An error occured while saving your proposition."
+msgstr "Det oppsto en feil under lagringen av forslaget ditt."
+
+#: app/templates/saving-propose-error.html:4
+#: app/templates/saving-vote-error.html:4
+msgid "Please try again later."
+msgstr "Vennligst prøv igjen senere."
+
+#: app/templates/saving-vote-error.html:2
+msgid "An error occured while saving your vote."
+msgstr "Det oppsto en feil under lagringen av stemmen din."
+
+#: app/templates/send-confirmation-subject.html:1
+msgid "GeoKrety - Confirm your vote"
+msgstr "GeoKrety - Bekreft stemmen din"
+
+#: app/templates/send-confirmation-text.html:1
+#, python-format
+msgid "Hi!\n\n"
+"Thanks you for participating in finding our mascot a name.\n\n"
+"You have voted for \"%(name)s\"\n\n"
+"Please click (or copy/paste) this link %(url)s to validate your vote.\n"
+msgstr "Hei!\n\n"
+"Tusen takk for deltakelsen din med å finne et navn til maskoten vår.\n\n"
+"Du har stemt på \"%(name)s\".\n\n"
+"Vennligst klikk på (eller kopiér/lim inn) denne lenken: %(url)s, for å bekrefte stemmen din.\n"
+
+#: app/templates/send-confirmation.html:5
+#, python-format
+msgid "Hi!<br>\n"
+"        Thanks you for participating in finding our mascot a name.<br>\n"
+"        You have voted for <q>%(name)s</q><br>\n"
+"        Please click to <a href=\"%(url)s\">validate your vote</a>."
+msgstr "Hei!<br>\n"
+"        Tusen takk for deltakelsen din med å finne et navn til maskoten vår.<br>\n"
+"        Du har stemt på <q>\"%(name)s\".</q><br>\n"
+"        Vennligst klikk her for å <a href=\"%(url)s\">bekrefte stemmen din</a>."
+
+#: app/templates/single.html:9
+msgid "Back Home"
+msgstr "Hjem"
+
+#: app/templates/validate.html:2
+msgid "Thank you!"
+msgstr "Tusen takk!"
+
+#: app/templates/validate.html:4
+msgid "Your vote has been registered."
+msgstr "Stemmen din har blitt registrert."
+
+#: app/templates/vote.html:2
+msgid "You're one step close to finish."
+msgstr "Du har ett steg igjen."
+
+#: app/templates/vote.html:4
+#, python-format
+msgid "You want to call me <q>%(name)s</q>"
+msgstr "Du vil kalle meg <q>%(name)s</q>"
+
+#: app/templates/vote.html:6
+msgid "Please enter your email and click the link in the mail you will receive to validate your choice."
+msgstr "Vennligst angi e-posten din og klikk på lenken du vil motta for å bekrefte valget ditt."
+
+#: app/templates/vote.html:8
+msgid "you@provider.net"
+msgstr ""
+
+#: app/templates/vote.html:10
+msgid "Send me the validation link"
+msgstr "Send meg bekreftelseslenken"
+
