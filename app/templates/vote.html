@@ -1,12 +1,12 @@
 {% extends "single.html" %}
-{% block s_heading %}You're one step close to finish.{% endblock %}
+{% block s_heading %}{{_('You\'re one step close to finish.')}}{% endblock %}
 {% block s_content %}
-    <h3>You want to call me <q>{{name}}</q></h3>
+    <h3>{{_('You want to call me <q>%(name)s</q>', name=name)}}</h3>
 
-    <h4 class="section-description">Please enter your email and click the link in the mail you will receive to validate your choice.</h4>
+    <h4 class="section-description">{{_('Please enter your email and click the link in the mail you will receive to validate your choice.')}}</h4>
     <form method="POST">
-      <input class="u-full-width" placeholder="you@provider.net" id="email" name="email" type="email" required>
+      <input class="u-full-width" placeholder="{{_('you@provider.net')}}" id="email" name="email" type="email" required>
 
-      <input class="button-primary u-max-full-width" value="Send me the validation link" type="submit">
+      <input class="button-primary u-max-full-width" value="{{_('Send me the validation link')}}" type="submit">
     </form>
 {% endblock %}

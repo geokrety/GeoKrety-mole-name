@@ -3,17 +3,28 @@ import hashlib
 import os
 import sqlite3
 
-from flask import (Flask, g, redirect, render_template, request,
+from flask import (Flask, abort, g, redirect, render_template, request,
                    send_from_directory, url_for)
+from flask_babel import Babel
 from ihih import IHIH
 from sendmail import sendConfirmation, sendProposition
 
 app = Flask(__name__)
 app.jinja_env.auto_reload = True
 app.config['TEMPLATES_AUTO_RELOAD'] = True
+app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+app.config['BABEL_DEFAULT_TIMEZONE'] = 'UTC'
+app.config['SUPPORTED_LANGUAGES'] = {
+    'en': 'English',
+    'pl': 'Polskie',
+    'fr': 'Francais'
+}
+
+babel = Babel(app)
 
 NAMES = None
 DATABASE = './database/database.db'
+
 
 def get_config():
     return IHIH(
@@ -21,6 +32,42 @@ def get_config():
             os.path.join(os.path.dirname(__file__), '../config/custom.conf')
         )
     )
+
+
+@babel.localeselector
+def get_locale():
+    locale = g.get('lang_code')
+    if locale not in app.config['SUPPORTED_LANGUAGES'].keys():
+        locale = request.accept_languages.best_match(app.config['SUPPORTED_LANGUAGES'].keys())
+    return locale
+
+
+@babel.timezoneselector
+def get_timezone():
+    user = g.get('user', None)
+    if user is not None:
+        return user.timezone
+
+
+@app.url_defaults
+def set_language_code(endpoint, values):
+    if 'lang_code' in values or not g.get('lang_code', None):
+        return
+    if app.url_map.is_endpoint_expecting(endpoint, 'lang_code'):
+        values['lang_code'] = g.lang_code
+
+
+@app.url_value_preprocessor
+def get_lang_code(endpoint, values):
+    if values is not None:
+        g.lang_code = values.pop('lang_code', None)
+
+
+@app.before_request
+def ensure_lang_support():
+    lang_code = g.get('lang_code', None)
+    if lang_code and lang_code not in app.config['SUPPORTED_LANGUAGES'].keys():
+        return abort(404)
 
 
 def get_db():
@@ -103,7 +150,8 @@ def update_averages():
         return
 
     for name in names:
-        count = query_db('SELECT count(*) as avg FROM votes WHERE validate_datetime IS NOT NULL AND name = ?', [name[0]], one=True)
+        count = query_db(
+            'SELECT count(*) as avg FROM votes WHERE validate_datetime IS NOT NULL AND name = ?', [name[0]], one=True)
         avg = 1.0 * count[0] / total['total'] * 100
         result = update_db('names', ["rate = ?"], [avg, name[0]], 'name = ?')
         if not result:
@@ -121,6 +169,7 @@ def send_static(path):
 
 
 @app.route("/")
+@app.route("/<lang_code>/")
 def index():
     with app.app_context():
         NAMES = query_db('SELECT * FROM names ORDER BY random()')
@@ -128,6 +177,7 @@ def index():
 
 
 @app.route("/vote/<name>", methods=['GET', 'POST'])
+@app.route("/<lang_code>/vote/<name>", methods=['GET', 'POST'])
 def vote(name):
     # Check name validity
     with app.app_context():
@@ -164,6 +214,7 @@ def vote(name):
 
 
 @app.route("/validate/<token>")
+@app.route("/<lang_code>/validate/<token>")
 def validate(token):
     with app.app_context():
         vote = query_db('SELECT * FROM votes WHERE token = ?', [token], one=True)
@@ -175,7 +226,8 @@ def validate(token):
             if not result:
                 return render_template('saving-vote-error.html')
         else:
-            result = update_db('votes', ["name=?, vote_datetime=datetime('now'), validate_datetime=datetime('now'), new_name=NULL"], [vote['new_name'], token], 'token = ?')
+            result = update_db('votes', ["name=?, vote_datetime=datetime('now'), validate_datetime=datetime('now'), new_name=NULL"], [
+                               vote['new_name'], token], 'token = ?')
             if not result:
                 return render_template('saving-vote-error.html')
     else:
@@ -185,12 +237,15 @@ def validate(token):
 
 
 @app.route("/check-your-mails")
+@app.route("/<lang_code>/check-your-mails")
 def check_your_mails():
     return render_template('check-your-mails.html')
 
 
 @app.route("/propose-name/<name>", methods=['GET', 'POST'])
+@app.route("/<lang_code>/propose-name/<name>", methods=['GET', 'POST'])
 @app.route("/propose-name", defaults={'name': ''}, methods=['GET', 'POST'])
+@app.route("/<lang_code>/propose-name", defaults={'name': ''}, methods=['GET', 'POST'])
 def propose_name(name):
     email = ''
     username = ''
@@ -219,6 +274,7 @@ def propose_name(name):
 
 
 @app.route("/send-mail-again/<email>")
+@app.route("/<lang_code>/send-mail-again/<email>")
 def mail_again(email):
     with app.app_context():
         vote = query_db('SELECT * FROM votes WHERE email = ?', [email], one=True)
@@ -234,7 +290,7 @@ def mail_again(email):
 @app.route("/moderate/<password>")
 def modaration_list(password):
     config = get_config()
-    if password !=  config.get('ADMIN_PASSWORD'):
+    if password != config.get('ADMIN_PASSWORD'):
         return redirect('/')
 
     with app.app_context():
@@ -245,7 +301,7 @@ def modaration_list(password):
 @app.route("/moderate/<password>/<id>/validate")
 def modaration_validate(password, id):
     config = get_config()
-    if password !=  config.get('ADMIN_PASSWORD'):
+    if password != config.get('ADMIN_PASSWORD'):
         return redirect('/')
 
     with app.app_context():
@@ -256,14 +312,13 @@ def modaration_validate(password, id):
                 return render_template('saving-propose-error.html')
             delete_db('proposed_names', [id])
 
-
     return redirect('/moderate/%s' % password)
 
 
 @app.route("/moderate/<password>/<id>/refuse")
 def modaration_refuse(password, id):
     config = get_config()
-    if password !=  config.get('ADMIN_PASSWORD'):
+    if password != config.get('ADMIN_PASSWORD'):
         return redirect('/')
 
     delete_db('proposed_names', [id])

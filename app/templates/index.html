@@ -3,8 +3,8 @@
   <div class="container">
     <div class="row">
       <div class="one-half column">
-        <h4 class="hero-heading">Do you know the GeoKrety mascot name?</h4>
-        <a class="button button-primary" href="#opinion">No? Normal, It doesn't have one yet!</a>
+        <h4 class="hero-heading">{{_('Do you know the GeoKrety mascot name?')}}</h4>
+        <a class="button button-primary" href="#opinion">{{_('No? Normal, It doesn\'t have one yet!')}}</a>
       </div>
       <div class="one-half column phones">
         <img class="phone" src="/static/images/the-mole.svg">
@@ -16,22 +16,22 @@
 <a id="opinion"></a>
 <div class="section get-help values">
   <div class="container">
-    <h3 class="section-heading">We need your opinion to choose one!</h3>
-    <p class="section-description">GeoKrety is nothing without you, and as a community we hear your voice. Make GeoKrety yours and vote for your favorite name!</p>
-    <a class="button button-primary" href="#vote">I want to vote!</a>
+    <h3 class="section-heading">{{_('We need your opinion to choose one!')}}</h3>
+    <p class="section-description">{{_('GeoKrety is nothing without you, and as a community we hear your voice. Make GeoKrety yours and vote for your favorite name!')}}</p>
+    <a class="button button-primary" href="#vote">{{_('I want to vote!')}}</a>
   </div>
 </div>
 
 <a id="vote"></a>
 <div class="section">
   <div class="container">
-    <h3 class="section-heading">Select your prefered name.</h3>
+    <h3 class="section-heading">{{_('Select your prefered name.')}}</h3>
     <div class="row">
       {% for value in names %}
       <div class="one-third column value mole-name">
         <h2 class="value-multiplier">{{value.name}}</h2>
         <h5 class="value-heading">{{'%0.2f'| format(value.rate|float)}}%</h5>
-        <a class="button button-primary" href="/vote/{{value.name}}">Vote</a>
+        <a class="button button-primary" href="/vote/{{value.name}}">{{_('Vote')}}</a>
       </div>
       {% if loop.index is divisibleby(3) %}
     </div>
@@ -41,7 +41,7 @@
     </div>
     <div class="row">
       <div class="column value mole-name">
-        <a class="button button-primary" href="/propose-name">Want to propose something else?</a>
+        <a class="button button-primary" href="/propose-name">{{_('Want to propose something else?')}}</a>
       </div>
     </div>
   </div>
@@ -49,9 +49,9 @@
 
 <div class="section categories">
   <div class="container">
-    <h3 class="section-heading">Other community poll</h3>
-    <p class="section-description">We are also looking for your help for designing a nice official KretyCoin to celebrate our 10th aniversary.</p>
-    <a class="button button-primary" href="https://coins.geokrety.org">Let me give my opinion</a>
+    <h3 class="section-heading">{{_('Other community poll')}}</h3>
+    <p class="section-description">{{_('We are also looking for your help for designing a nice official KretyCoin to celebrate our 10th aniversary.')}}</p>
+    <a class="button button-primary" href="https://coins.geokrety.org">{{_('Let me give my opinion')}}</a>
   </div>
 </div>
 {% endblock %}

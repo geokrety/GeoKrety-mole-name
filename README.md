@@ -17,3 +17,10 @@ We distribute a `Dockerfile` and `docker-compose.yml` to help you start.
 
 * Open a pull request, rebased on current master
 * If you add dependencies to other project, please add them to `ATTRIBUTIONS.md`
+
+# Manage translations
+
+* Extract translatable strings: `docker exec -it geokretymascottname_geokrety-mole-name_1 pybabel extract -F babel.cfg -o app/translations/messages.pot app`
+* Connect to crowdin and upload file
+* Import Translate files into code source tree
+* Compile new translations `docker exec -it geokretymascottname_geokrety-mole-name_1 pybabel compile -d app/translations/`

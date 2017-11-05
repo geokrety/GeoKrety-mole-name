@@ -1,0 +1,171 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: geokrety\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2017-11-05 15:17+0000\n"
+"PO-Revision-Date: 2017-11-05 10:19-0500\n"
+"Last-Translator: geokrety <geokrety@gmail.com>\n"
+"Language-Team: French\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: geokrety\n"
+"X-Crowdin-Language: fr\n"
+"X-Crowdin-File: messages.pot\n"
+"Language: fr_FR\n"
+
+#: app/templates/already-proposed-error.html:2
+msgid "Thanks for your proposition,"
+msgstr "Merci pour votre proposition,"
+
+#: app/templates/already-proposed-error.html:4
+msgid "But this name was already proposed."
+msgstr "Mais ce nom à déjà été proposé."
+
+#: app/templates/already-voted.html:2
+msgid "You have already voted"
+msgstr "Vous avez déjà voté"
+
+#: app/templates/already-voted.html:5
+#, python-format
+msgid "for <q>%(name)s</q> on %(vote_datetime)s"
+msgstr "pour <q>%(name)s</q> le %(vote_datetime)s"
+
+#: app/templates/already-voted.html:10
+#, python-format
+msgid "Do you want to change your vote for <q>%(new_name)s"
+msgstr "Voulez-vous changer votre vote pour <q>%(new_name)s"
+
+#: app/templates/already-voted.html:16
+msgid "Yes, change my vote"
+msgstr "Oui, changer mon vote"
+
+#: app/templates/already-voted.html:20
+msgid "Be careful you didn't validated your vote!"
+msgstr "Attention, vous n’a pas encore validé votre vote !"
+
+#: app/templates/already-voted.html:22
+msgid "Send validation link again"
+msgstr "Envoyer le lien de validation à nouveau"
+
+#: app/templates/base.html:9
+msgid "GeoKrety Mascot name"
+msgstr "Nom de la mascotte GeoKrety"
+
+#: app/templates/check-your-mails.html:2
+msgid "Now, check your mails"
+msgstr "Maintenant, vérifiez vos mails"
+
+#: app/templates/check-your-mails.html:4
+msgid "and clic the validation link."
+msgstr "et cliquez sur le lien de validation."
+
+#: app/templates/index.html:6
+msgid "Do you know the GeoKrety mascot name?"
+msgstr "Connaissez-vous le nom de la mascotte GeoKrety ?"
+
+#: app/templates/index.html:7
+msgid "No? Normal, It doesn't have one yet!"
+msgstr "Non ? Normal, elle n'en a pas un encore !"
+
+#: app/templates/index.html:19
+msgid "We need your opinion to choose one!"
+msgstr "Nous avons besoin de votre avis pour en choisir un !"
+
+#: app/templates/index.html:20
+msgid "GeoKrety is nothing without you, and as a community we hear your voice. Make GeoKrety yours and vote for your favorite name!"
+msgstr "GeoKrety n’est rien sans vous, et en tant que communauté nous entendons votre voix. Appropriez-vous les GeoKrety et votez pour votre nom préféré !"
+
+#: app/templates/index.html:21
+msgid "I want to vote!"
+msgstr "Je veux voter !"
+
+#: app/templates/index.html:28
+msgid "Select your prefered name."
+msgstr "Sélectionnez votre nom préféré."
+
+#: app/templates/index.html:34
+msgid "Vote"
+msgstr "Voter"
+
+#: app/templates/index.html:44
+msgid "Want to propose something else?"
+msgstr "Vous voulez proposer quelque chose d’autre ?"
+
+#: app/templates/index.html:52
+msgid "Other community poll"
+msgstr "Autre sondage communautaire"
+
+#: app/templates/index.html:53
+msgid "We are also looking for your help for designing a nice official KretyCoin to celebrate our 10th aniversary."
+msgstr "Nous avons également besoin de votre aide pour concevoir un joli KretyCoin officiel afin de célébrer notre 10ème anniversaire."
+
+#: app/templates/index.html:54
+msgid "Let me give my opinion"
+msgstr "Je veux donner mon avis"
+
+#: app/templates/no-such-token.html:2
+msgid "An error occured while saving you vote."
+msgstr "Une erreur s’est produite lors de l'enregistrement de votre vote."
+
+#: app/templates/no-such-token.html:4
+msgid "Invalid token."
+msgstr "Jeton non valide."
+
+#: app/templates/saving-for-review.html:2
+msgid "Thanks!"
+msgstr "Merci !"
+
+#: app/templates/saving-for-review.html:4
+msgid "Your proposition is now waiting for moderation."
+msgstr "Votre proposition est maintenant en attente de modération."
+
+#: app/templates/saving-propose-error.html:2
+msgid "An error occured while saving your proposition."
+msgstr "Une erreur s’est produite lors de l’enregistrement de votre proposition."
+
+#: app/templates/saving-propose-error.html:4
+#: app/templates/saving-vote-error.html:4
+msgid "Please try again later."
+msgstr "Veuillez réessayer ultérieurement."
+
+#: app/templates/saving-vote-error.html:2
+msgid "An error occured while saving your vote."
+msgstr "Une erreur s’est produite lors de l'enregistrement de votre vote."
+
+#: app/templates/single.html:9
+msgid "Back Home"
+msgstr "Retour à l'Accueil"
+
+#: app/templates/validate.html:2
+msgid "Thank you!"
+msgstr "Merci !"
+
+#: app/templates/validate.html:4
+msgid "Your vote has been registered."
+msgstr "Votre vote a été enregistré."
+
+#: app/templates/vote.html:2
+msgid "You're one step close to finish."
+msgstr "Vous avez presque terminé."
+
+#: app/templates/vote.html:4
+#, python-format
+msgid "You want to call me <q>%(name)s</q>"
+msgstr "Vous voulez m’appeler <q>%(name)s</q>"
+
+#: app/templates/vote.html:6
+msgid "Please enter your email and click the link in the mail you will receive to validate your choice."
+msgstr "Veuillez entrer votre email et cliquer sur le lien dans le mail que vous recevrez afin de valider votre choix."
+
+#: app/templates/vote.html:8
+msgid "you@provider.net"
+msgstr "vous@fournisseur.net"
+
+#: app/templates/vote.html:10
+msgid "Send me the validation link"
+msgstr "M’envoyer le lien de validation"
+
