@@ -4,7 +4,11 @@
 
 <ul>
   {% for proposition in propositions %}
-  <li><q>{{ proposition.name }}</q> by <q>{{ proposition.username }}</q> ({{ proposition.email }})</li>
+  <li>
+    <a class="button button-primary" href="/moderate/{{password}}/{{ proposition.id }}/validate">Validate</a>
+    <a class="button button-primary" href="/moderate/{{password}}/{{ proposition.id }}/refuse">Refuse</a>
+    <q>{{ proposition.name }}</q> by <q>{{ proposition.username }}</q> ({{ proposition.email }})
+  </li>
   {% endfor %}
 </ul>
 {% endblock %}

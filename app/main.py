@@ -6,7 +6,7 @@ import sqlite3
 from flask import (Flask, g, redirect, render_template, request,
                    send_from_directory, url_for)
 from ihih import IHIH
-from sendmail import sendConfirmation
+from sendmail import sendConfirmation, sendProposition
 
 app = Flask(__name__)
 app.jinja_env.auto_reload = True
@@ -73,6 +73,15 @@ def update_db(table, fields=(), values=(), condition='1 = 1'):
         count = cur.execute(query, values)
         db.commit()
         cur.close()
+        return count
+
+
+def delete_db(table, condition):
+    with app.app_context():
+        db = get_db()
+        query = 'DELETE FROM proposed_names WHERE id = ?'
+        count = db.execute(query, condition)
+        db.commit()
         return count
 
 
@@ -186,12 +195,24 @@ def propose_name(name):
     email = ''
     username = ''
     if request.method == 'POST':
-        name = request.form['name']
+        name = request.form['name'].lower()
         username = request.form['username']
         email = request.form['email']
+
+        name = name.replace('g', 'G', 1).replace('k', 'K', 1)
+
+        with app.app_context():
+            result = query_db('SELECT * FROM names WHERE name = ?', [name])
+            if result:
+                return render_template('already-proposed-error.html')
+            result = query_db('SELECT * FROM proposed_names WHERE name = ?', [name])
+            if result:
+                return render_template('already-proposed-error.html')
+
         result = insert_db('proposed_names', ('username', 'name', 'email'), (username, name, email))
         if not result:
             return render_template('saving-propose-error.html')
+        sendProposition().send(name)
         return render_template('saving-for-review.html')
 
     return render_template('propose-name.html', username=username, name=name, email=email)
@@ -218,17 +239,36 @@ def modaration_list(password):
 
     with app.app_context():
         propositions = query_db('SELECT * FROM proposed_names', [])
-    return render_template('moderate-list.html', propositions=propositions)
+    return render_template('moderate-list.html', password=password, propositions=propositions)
 
 
+@app.route("/moderate/<password>/<id>/validate")
+def modaration_validate(password, id):
+    config = get_config()
+    if password !=  config.get('ADMIN_PASSWORD'):
+        return redirect('/')
 
-    # if vote and vote['validate_datetime']:
-    #     return render_template('already-voted.html', name=vote['name'], email=vote['email'], vote_datetime=vote['vote_datetime'], validate_datetime=vote['validate_datetime'])
-    # if vote:
-    #     s = sendConfirmation().send(email, vote['token'], vote['name'])
-    #     return render_template('check-your-mails.html')
+    with app.app_context():
+        proposition = query_db('SELECT * FROM proposed_names WHERE id = ?', [id], one=True)
+        if proposition:
+            result = insert_db('names', ('name',), (proposition['name'],))
+            if not result:
+                return render_template('saving-propose-error.html')
+            delete_db('proposed_names', [id])
 
-    return redirect('/')
+
+    return redirect('/moderate/%s' % password)
+
+
+@app.route("/moderate/<password>/<id>/refuse")
+def modaration_refuse(password, id):
+    config = get_config()
+    if password !=  config.get('ADMIN_PASSWORD'):
+        return redirect('/')
+
+    delete_db('proposed_names', [id])
+
+    return redirect('/moderate/%s' % password)
 
 
 if __name__ == '__main__':

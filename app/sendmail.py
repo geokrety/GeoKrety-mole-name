@@ -52,7 +52,11 @@ class send:
 class sendConfirmation(send):
     def send(self, to, token, name):
         subject = "GeoKrety - Confirm your vote"
-        text = "Hi!\nThanks you for participating in finding our mascot a name.\nPlease clic (or copy/paste) this link %s/validate/%s to validate your vote."
+        text = """Hi!\nThanks you for participating in finding our mascot a name.\nYou have voted for "%s"\nPlease click (or copy/paste) this link %s/validate/%s to validate your vote.""" % (
+            name,
+            self.config.get('SITE_BASE', "https://molename.geokrety.org"),
+            token
+        )
         html = """\
         <html>
           <head></head>
@@ -60,7 +64,7 @@ class sendConfirmation(send):
             <p>Hi!<br>
                Thanks you for participating in finding our mascot a name.<br>
                You have voted for <q>%s</q><br>
-               Please clic this <a href="%s/validate/%s">link</a> to validate your vote.
+               Please click to <a href="%s/validate/%s">validate your vote</a>.
             </p>
           </body>
         </html>
@@ -73,23 +77,26 @@ class sendConfirmation(send):
 
 
 class sendProposition(send):
-    def send(self, to, token, name):
+    def send(self, name):
         subject = "GeoKrety - New mole name proposition"
-        text = "Hi!\nSomeone proposed.\nPlease clic (or copy/paste) this link %s/validate/%s to validate your vote."
+        text = """Hi!\nSomeone proposed a new mole name: "%s".\nPlease review the proposition at %s/moderate/%s""" % (
+            name,
+            self.config.get('SITE_BASE', "https://molename.geokrety.org"),
+            self.config.get('ADMIN_PASSWORD'),
+        )
         html = """\
         <html>
           <head></head>
           <body>
             <p>Hi!<br>
-               Thanks you for participating in finding our mascot a name.<br>
-               You have voted for <q>%s</q><br>
-               Please clic this <a href="%s/validate/%s">link</a> to validate your vote.
+               Someone proposed a new mole name: <q>%s</q>.<br>
+               Please <a href="%s/moderate/%s">review the proposition</a>.
             </p>
           </body>
         </html>
         """ % (
             name,
             self.config.get('SITE_BASE', "https://molename.geokrety.org"),
-            token
+            self.config.get('ADMIN_PASSWORD'),
         )
-        self._send(to, subject, text, html)
+        self._send(self.config.get('EMAIL_FROM', "geokrety@gmail.com"), subject, text, html)
