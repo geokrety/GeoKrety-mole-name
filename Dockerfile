@@ -17,4 +17,5 @@ COPY . /opt/flask
 WORKDIR /opt/flask
 EXPOSE 8000
 
+ENTRYPOINT ["/opt/flask/entrypoint.sh"]
 CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8000", "--reload", "app.main:app"]

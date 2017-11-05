@@ -168,7 +168,7 @@ def validate(token):
     with app.app_context():
         vote = query_db('SELECT * FROM votes WHERE token = ?', [token], one=True)
     if vote:
-        if vote['new_name'] is None and vote['vote_datetime'] is not None:
+        if vote['new_name'] is None and vote['validate_datetime'] is not None:
             return render_template('already-voted.html', name=vote['name'], email=vote['email'], vote_datetime=vote['vote_datetime'], validate_datetime=vote['validate_datetime'])
         elif vote['new_name'] is None:
             result = update_db('votes', ["validate_datetime=datetime('now'), new_name=NULL"], [token], 'token = ?')

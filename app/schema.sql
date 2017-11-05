@@ -26,9 +26,3 @@ CREATE TABLE IF NOT EXISTS votes
     FOREIGN KEY (name) REFERENCES names(id),
     FOREIGN KEY (new_name) REFERENCES names(id)
 );
-
-
--- CREATE INDEX index_token ON votes(token);
--- CREATE INDEX index_validate_date ON votes(validate_date);
-
-INSERT INTO names (name) VALUES ('GeeKay'), ('GraKi'), ('GieneK'), ('GoKou'), ('GeyKee'), ('GeoKey');
