@@ -21,17 +21,27 @@
     <a class="button button-primary" href="#vote">{{_('I want to vote!')}}</a>
   </div>
 </div>
-
+{%set step=1%}
 <a id="vote"></a>
 <div class="section">
   <div class="container">
-    <h3 class="section-heading">{{_('Select your prefered name.')}}</h3>
+    <h3 class="section-heading">{{_('Take part to the poll.')}}</h3>
+
+    <p>{{_('The vote will take place in three steps.')}}</p>
+    <ol>
+      <li>{% if vote_step == '1' %}<b>&#8594;{% endif %}{{_('We collect your propositions')}}{% if vote_step == '1' %}&#8592;</b>{% endif %}</li>
+      <li>{% if vote_step == '2' %}<b>&#8594;{% endif %}{{_('Selection by a comitee')}}{% if vote_step == '2' %}&#8592;</b>{% endif %}</li>
+      <li>{% if vote_step == '3' %}<b>&#8594;{% endif %}{{_('You vote for your prefered name')}}{% if vote_step == '3' %}&#8592;</b>{% endif %}</li>
+    </ol>
+
     <div class="row">
       {% for value in names %}
       <div class="one-third column value mole-name">
         <h2 class="value-multiplier">{{value.name}}</h2>
+        {% if vote_step == '3' %}
         <h5 class="value-heading">{{'%0.2f'| format(value.rate|float)}}%</h5>
         <a class="button button-primary" href="{{url_for('vote', name=value.name)}}">{{_('Vote')}}</a>
+        {% endif %}
       </div>
       {% if loop.index is divisibleby(3) %}
     </div>
@@ -39,11 +49,13 @@
       {% endif %}
       {% endfor %}
     </div>
+    {% if vote_step == '1' %}
     <div class="row">
       <div class="column value mole-name">
         <a class="button button-primary" href="{{url_for('propose_name')}}">{{_('Want to propose something else?')}}</a>
       </div>
     </div>
+    {% endif %}
   </div>
 </div>
 
