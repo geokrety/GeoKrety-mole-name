@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-11-05 15:17+0000\n"
+"POT-Creation-Date: 2017-11-05 15:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -117,6 +117,46 @@ msgstr ""
 
 #: app/templates/no-such-token.html:4
 msgid "Invalid token."
+msgstr ""
+
+#: app/templates/propose-name.html:2
+msgid "You have another idea?"
+msgstr ""
+
+#: app/templates/propose-name.html:4
+msgid "Don't hesitate to submit your favorite and cute name."
+msgstr ""
+
+#: app/templates/propose-name.html:7
+msgid "Name must not be offensive"
+msgstr ""
+
+#: app/templates/propose-name.html:8
+msgid "Name must contains letters <q>G</q> and <q>K</q> in that order"
+msgstr ""
+
+#: app/templates/propose-name.html:14
+msgid "I propose as the mascot name"
+msgstr ""
+
+#: app/templates/propose-name.html:15
+msgid "Some name"
+msgstr ""
+
+#: app/templates/propose-name.html:18
+msgid "Your username"
+msgstr ""
+
+#: app/templates/propose-name.html:19
+msgid "Username"
+msgstr ""
+
+#: app/templates/propose-name.html:22
+msgid "Your email"
+msgstr ""
+
+#: app/templates/propose-name.html:27
+msgid "Propose"
 msgstr ""
 
 #: app/templates/saving-for-review.html:2

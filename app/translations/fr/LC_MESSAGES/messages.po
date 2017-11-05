@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: geokrety\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-11-05 15:17+0000\n"
-"PO-Revision-Date: 2017-11-05 10:19-0500\n"
+"POT-Creation-Date: 2017-11-05 15:27+0000\n"
+"PO-Revision-Date: 2017-11-05 10:30-0500\n"
 "Last-Translator: geokrety <geokrety@gmail.com>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -69,7 +69,7 @@ msgstr "Connaissez-vous le nom de la mascotte GeoKrety ?"
 
 #: app/templates/index.html:7
 msgid "No? Normal, It doesn't have one yet!"
-msgstr "Non ? Normal, elle n'en a pas un encore !"
+msgstr "Non ? Normal, elle n'en a pas encore !"
 
 #: app/templates/index.html:19
 msgid "We need your opinion to choose one!"
@@ -114,6 +114,46 @@ msgstr "Une erreur s’est produite lors de l'enregistrement de votre vote."
 #: app/templates/no-such-token.html:4
 msgid "Invalid token."
 msgstr "Jeton non valide."
+
+#: app/templates/propose-name.html:2
+msgid "You have another idea?"
+msgstr "Vous avez une autre idée ?"
+
+#: app/templates/propose-name.html:4
+msgid "Don't hesitate to submit your favorite and cute name."
+msgstr "N’hésitez pas à soumettre votre nom préféré et mignon."
+
+#: app/templates/propose-name.html:7
+msgid "Name must not be offensive"
+msgstr "Le nom ne doit pas être offensant"
+
+#: app/templates/propose-name.html:8
+msgid "Name must contains letters <q>G</q> and <q>K</q> in that order"
+msgstr "Le nom doit contenir les lettres <q>G</q> et <q>K</q> dans cet ordre"
+
+#: app/templates/propose-name.html:14
+msgid "I propose as the mascot name"
+msgstr "Je propose comme nom de mascotte"
+
+#: app/templates/propose-name.html:15
+msgid "Some name"
+msgstr "Un nom"
+
+#: app/templates/propose-name.html:18
+msgid "Your username"
+msgstr "Votre nom d’utilisateur"
+
+#: app/templates/propose-name.html:19
+msgid "Username"
+msgstr "Nom d’utilisateur"
+
+#: app/templates/propose-name.html:22
+msgid "Your email"
+msgstr "Votre adresse email"
+
+#: app/templates/propose-name.html:27
+msgid "Propose"
+msgstr "Proposer"
 
 #: app/templates/saving-for-review.html:2
 msgid "Thanks!"
