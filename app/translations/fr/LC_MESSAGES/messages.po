@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: geokrety\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-11-05 15:27+0000\n"
-"PO-Revision-Date: 2017-11-05 10:30-0500\n"
+"POT-Creation-Date: 2017-11-05 15:47+0000\n"
+"PO-Revision-Date: 2017-11-05 10:57-0500\n"
 "Last-Translator: geokrety <geokrety@gmail.com>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -175,6 +175,31 @@ msgstr "Veuillez réessayer ultérieurement."
 #: app/templates/saving-vote-error.html:2
 msgid "An error occured while saving your vote."
 msgstr "Une erreur s’est produite lors de l'enregistrement de votre vote."
+
+#: app/templates/send-confirmation-subject.html:1
+msgid "GeoKrety - Confirm your vote"
+msgstr "GeoKrety - confirmer votre vote"
+
+#: app/templates/send-confirmation-text.html:1
+#, python-format
+msgid "Hi!\n\n"
+"Thanks you for participating in finding our mascot a name.\n\n"
+"You have voted for \"%(name)s\"\n\n"
+"Please click (or copy/paste) this link %(url)s to validate your vote.\n"
+msgstr "Salut !\n"
+"Merci pour votre participation à notre recherche d'un nom de mascotte.\n"
+"Vous avez voté pour « %(name)s », veuillez cliquer (ou copier/coller) sur ce lien %(url)s pour valider votre vote. \n"
+
+#: app/templates/send-confirmation.html:5
+#, python-format
+msgid "Hi!<br>\n"
+"        Thanks you for participating in finding our mascot a name.<br>\n"
+"        You have voted for <q>%(name)s</q><br>\n"
+"        Please click to <a href=\"%(url)s\">validate your vote</a>."
+msgstr "Salut ! <br>\n"
+"Merci pour votre participation à notre recherche d'un nom de mascotte.<br>\n"
+"Vous avez voté pour <q>%(name)s</q> <br>\n"
+"Veuillez cliquer pour <a href=\"%(url)s\">valider votre vote</a>."
 
 #: app/templates/single.html:9
 msgid "Back Home"

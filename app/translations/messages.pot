@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-11-05 15:27+0000\n"
+"POT-Creation-Date: 2017-11-05 15:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -178,6 +178,31 @@ msgstr ""
 
 #: app/templates/saving-vote-error.html:2
 msgid "An error occured while saving your vote."
+msgstr ""
+
+#: app/templates/send-confirmation-subject.html:1
+msgid "GeoKrety - Confirm your vote"
+msgstr ""
+
+#: app/templates/send-confirmation-text.html:1
+#, python-format
+msgid ""
+"Hi!\n"
+"\n"
+"Thanks you for participating in finding our mascot a name.\n"
+"\n"
+"You have voted for \"%(name)s\"\n"
+"\n"
+"Please click (or copy/paste) this link %(url)s to validate your vote.\n"
+msgstr ""
+
+#: app/templates/send-confirmation.html:5
+#, python-format
+msgid ""
+"Hi!<br>\n"
+"        Thanks you for participating in finding our mascot a name.<br>\n"
+"        You have voted for <q>%(name)s</q><br>\n"
+"        Please click to <a href=\"%(url)s\">validate your vote</a>."
 msgstr ""
 
 #: app/templates/single.html:9

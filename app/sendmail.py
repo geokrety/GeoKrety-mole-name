@@ -3,6 +3,8 @@ import smtplib
 import sys
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+
+from flask import render_template
 from ihih import IHIH
 
 
@@ -23,8 +25,8 @@ class send:
         msg['To'] = to
 
         # Record the MIME types of both parts - text/plain and text/html.
-        part1 = MIMEText(text, 'plain')
-        part2 = MIMEText(html, 'html')
+        part1 = MIMEText(text, 'plain', 'utf-8')
+        part2 = MIMEText(html, 'html', 'utf-8')
 
         # Attach parts into message container.
         # According to RFC 2046, the last part of a multipart message, in this case
@@ -33,7 +35,8 @@ class send:
         msg.attach(part2)
 
         # Send the message via local SMTP server.
-        s = smtplib.SMTP(self.config.get('EMAIL_SMTP_HOST', "smtp.gmail.com"), self.config.get('EMAIL_SMTP_PORT', '587'))
+        s = smtplib.SMTP(self.config.get('EMAIL_SMTP_HOST', "smtp.gmail.com"),
+                         self.config.get('EMAIL_SMTP_PORT', '587'))
 
         if self.config.get_bool('EMAIL_TLS', True):
             s.starttls()
@@ -51,28 +54,15 @@ class send:
 
 class sendConfirmation(send):
     def send(self, to, token, name):
-        subject = "GeoKrety - Confirm your vote"
-        text = """Hi!\nThanks you for participating in finding our mascot a name.\nYou have voted for "%s"\nPlease click (or copy/paste) this link %s/validate/%s to validate your vote.""" % (
-            name,
+        subject = render_template('send-confirmation-subject.html')
+        text = render_template('send-confirmation-text.html', name=name, url='%s/validate/%s' % (
             self.config.get('SITE_BASE', "https://molename.geokrety.org"),
             token
-        )
-        html = """\
-        <html>
-          <head></head>
-          <body>
-            <p>Hi!<br>
-               Thanks you for participating in finding our mascot a name.<br>
-               You have voted for <q>%s</q><br>
-               Please click to <a href="%s/validate/%s">validate your vote</a>.
-            </p>
-          </body>
-        </html>
-        """ % (
-            name,
+        ))
+        html = render_template('send-confirmation.html', name=name, url='%s/validate/%s' % (
             self.config.get('SITE_BASE', "https://molename.geokrety.org"),
             token
-        )
+        ))
         self._send(to, subject, text, html)
 
 
