@@ -7,6 +7,7 @@ RUN apt-get update \
         python-dev \
         build-essential \
         git \
+        sqlite3 \
     && apt-get clean \
     && rm -fr /var/lib/apt/lists
 
