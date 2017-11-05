@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-11-05 15:47+0000\n"
+"POT-Creation-Date: 2017-11-05 19:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -157,6 +157,12 @@ msgstr ""
 
 #: app/templates/propose-name.html:27
 msgid "Propose"
+msgstr ""
+
+#: app/templates/propose-name.html:29 app/templates/vote.html:12
+msgid ""
+"Your mail address will only be used to validate your vote, we will never "
+"share it with other parties."
 msgstr ""
 
 #: app/templates/saving-for-review.html:2

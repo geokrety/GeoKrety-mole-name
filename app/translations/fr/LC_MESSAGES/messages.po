@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: geokrety\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-11-05 15:47+0000\n"
-"PO-Revision-Date: 2017-11-05 10:57-0500\n"
+"POT-Creation-Date: 2017-11-05 19:32+0000\n"
+"PO-Revision-Date: 2017-11-05 14:35-0500\n"
 "Last-Translator: geokrety <geokrety@gmail.com>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -14,7 +14,7 @@ msgstr ""
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: geokrety\n"
 "X-Crowdin-Language: fr\n"
-"X-Crowdin-File: messages.pot\n"
+"X-Crowdin-File: the_mole_with_no_name.pot\n"
 "Language: fr_FR\n"
 
 #: app/templates/already-proposed-error.html:2
@@ -154,6 +154,10 @@ msgstr "Votre adresse email"
 #: app/templates/propose-name.html:27
 msgid "Propose"
 msgstr "Proposer"
+
+#: app/templates/propose-name.html:29 app/templates/vote.html:12
+msgid "Your mail address will only be used to validate your vote, we will never share it with other parties."
+msgstr "Votre adresse mail servira seulement à valider votre vote, nous ne la partagerons jamais avec d’autres parties."
 
 #: app/templates/saving-for-review.html:2
 msgid "Thanks!"
