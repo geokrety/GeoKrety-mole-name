@@ -177,7 +177,10 @@ def send_static(path):
 @app.route("/<lang_code>/")
 def index():
     with app.app_context():
-        NAMES = query_db('SELECT * FROM names ORDER BY random()')
+        sql = 'SELECT * FROM names ORDER BY name'
+        if get_config().get('VOTE_STEP') == '3':
+            sql = 'SELECT * FROM names ORDER BY random()'
+        NAMES = query_db(sql)
     return render_template('index.html', names=NAMES)
 
 
