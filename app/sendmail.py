@@ -3,7 +3,6 @@ import smtplib
 import sys
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-
 from ihih import IHIH
 
 
@@ -54,6 +53,29 @@ class sendConfirmation(send):
     def send(self, to, token, name):
         subject = "GeoKrety - Confirm your vote"
         text = "Hi!\nThanks you for participating in finding our mascot a name.\nPlease clic (or copy/paste) this link %s/validate/%s to validate your vote."
+        html = """\
+        <html>
+          <head></head>
+          <body>
+            <p>Hi!<br>
+               Thanks you for participating in finding our mascot a name.<br>
+               You have voted for <q>%s</q><br>
+               Please clic this <a href="%s/validate/%s">link</a> to validate your vote.
+            </p>
+          </body>
+        </html>
+        """ % (
+            name,
+            self.config.get('SITE_BASE', "https://molename.geokrety.org"),
+            token
+        )
+        self._send(to, subject, text, html)
+
+
+class sendProposition(send):
+    def send(self, to, token, name):
+        subject = "GeoKrety - New mole name proposition"
+        text = "Hi!\nSomeone proposed.\nPlease clic (or copy/paste) this link %s/validate/%s to validate your vote."
         html = """\
         <html>
           <head></head>

@@ -1,15 +1,24 @@
 {% extends "single.html" %}
-{% block s_heading %}You have already voted.{% endblock %}
+{% block s_heading %}You have already voted{% endblock %}
 {% block s_content %}
     <h3 class="section-description">
-      for <q>{{name}}</q> on {{vote_date}}.
+      for <q>{{name}}</q> on {{vote_datetime}}.
     </h3>
 
-    {% if not validate_date %}
+    {% if new_name and name != new_name %}
+    <h4 class="section-description">
+      Do you want to change your vote for <q>{{new_name}}</q>?
+    </h4>
+    <form method="POST">
+      <input id="newNameInput" name="new_name" type="hidden" value="{{new_name}}" required>
+      <input id="emailInput" name="email" type="hidden" value="{{email}}" required>
+      <input id="changeVoteInput" name="change_vote" type="hidden" value="True" required>
+      <input class="button-primary u-max-full-width" value="Yes, change my vote" type="submit">
+    </form>
+    {% elif not validate_datetime %}
     <h4 class="section-description">
       Be careful you didn't validated your vote!
     </h4>
-
     <a class="button button-primary" href="/send-mail-again/{{email}}">Send validation link again</a>
     {% endif %}
 {% endblock %}

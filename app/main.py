@@ -1,9 +1,11 @@
+#!/usr/bin/env python
+import hashlib
 import os
 import sqlite3
-import hashlib
 
 from flask import (Flask, g, redirect, render_template, request,
                    send_from_directory, url_for)
+from ihih import IHIH
 from sendmail import sendConfirmation
 
 app = Flask(__name__)
@@ -11,15 +13,14 @@ app.jinja_env.auto_reload = True
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 NAMES = None
-#     'GraKi': 24,
-#     'GieneK': 20,
-#     'GeyKee': 16,
-#     'GeoKey': 12,
-#     'GoKou': 8,
-#     'GeeKay': 1,
-# }
-
 DATABASE = './database/database.db'
+
+def get_config():
+    return IHIH(
+        (
+            os.path.join(os.path.dirname(__file__), '../config/custom.conf')
+        )
+    )
 
 
 def get_db():
@@ -84,21 +85,18 @@ def init_db():
 
 
 def update_averages():
-    counts = query_db('SELECT name, count(*) as avg FROM votes GROUP BY name', [])
-    if not counts:
-        return "COUNT FAILED"
-    print counts
+    names = query_db('SELECT name FROM names', [])
+    if not names:
+        return
 
     total = query_db('SELECT count(*) as total FROM votes', [], one=True)
     if not total:
-        return "TOTAL FAILED"
-    print total['total']
+        return
 
-    for name, count in counts:
-        print name, count
-        avg = 1.0 * count / total['total'] * 100
-        print avg
-        result = update_db('names', ["rate = ?"], [avg, name], 'name = ?')
+    for name in names:
+        count = query_db('SELECT count(*) as avg FROM votes WHERE validate_datetime IS NOT NULL AND name = ?', [name[0]], one=True)
+        avg = 1.0 * count[0] / total['total'] * 100
+        result = update_db('names', ["rate = ?"], [avg, name[0]], 'name = ?')
         if not result:
             return
 
@@ -132,17 +130,22 @@ def vote(name):
     # Save user vote
     if request.method == 'POST':
         email = request.form['email']
+        change_vote = 'change_vote' in request.form
         # Already voted?
         with app.app_context():
             vote = query_db('SELECT * FROM votes WHERE email = ?', [email], one=True)
-        if vote:
-            return render_template('already-voted.html', name=vote['name'], email=vote['email'], vote_date=vote['vote_date'], validate_date=vote['validate_date'])
+        if vote and not change_vote:
+            return render_template('already-voted.html', new_name=name, name=vote['name'], email=vote['email'], vote_datetime=vote['vote_datetime'], validate_datetime=vote['validate_datetime'])
 
         # has never voted
         token = hashlib.sha224(os.urandom(64)).hexdigest()
-        result = insert_db('votes', ('name', 'email', 'token'), (name, email, token))
+        if not change_vote:
+            result = insert_db('votes', ('name', 'email', 'token'), (name, email, token))
+        else:
+            result = update_db('votes', ["new_name = ?, token = ?"], [name, token, email], 'email = ?')
+            # result = insert_db('votes', ('name', 'email', 'token'), (name, email, token))
         if not result:
-            return render_template('saving-error.html')
+            return render_template('saving-vote-error.html')
 
         # Send confirmation mail
         sendConfirmation().send(email, token, name)
@@ -154,13 +157,16 @@ def vote(name):
 @app.route("/validate/<token>")
 def validate(token):
     with app.app_context():
-        vote = query_db('SELECT * FROM votes WHERE token = ? AND validate_date IS NOT NULL', [token], one=True)
+        vote = query_db('SELECT * FROM votes WHERE token = ? AND validate_datetime IS NOT NULL', [token], one=True)
     if vote:
-        return render_template('already-voted.html', name=vote['name'], email=vote['email'], vote_date=vote['vote_date'], validate_date=vote['validate_date'])
-
-    result = update_db('votes', ["validate_date=datetime('now')"])
+        if vote['new_name'] is None:
+            return render_template('already-voted.html', name=vote['name'], email=vote['email'], vote_datetime=vote['vote_datetime'], validate_datetime=vote['validate_datetime'])
+        else:
+            result = update_db('votes', ["name=new_name, validate_datetime=datetime('now'), new_name=NULL"])
+    else:
+        result = update_db('votes', ["validate_datetime=datetime('now')"])
     if not result:
-        return render_template('saving-error.html')
+        return render_template('saving-vote-error.html')
     update_averages()
     return render_template('validate.html')
 
@@ -170,23 +176,56 @@ def check_your_mails():
     return render_template('check-your-mails.html')
 
 
-@app.route("/propose-name/<name>")
-@app.route("/propose-name", defaults={'name': ''})
+@app.route("/propose-name/<name>", methods=['GET', 'POST'])
+@app.route("/propose-name", defaults={'name': ''}, methods=['GET', 'POST'])
 def propose_name(name):
-    return render_template('invalid-name.html', name=name)
+    email = ''
+    username = ''
+    if request.method == 'POST':
+        name = request.form['name']
+        username = request.form['username']
+        email = request.form['email']
+        result = insert_db('proposed_names', ('username', 'name', 'email'), (username, name, email))
+        if not result:
+            return render_template('saving-propose-error.html')
+        return render_template('saving-for-review.html')
+
+    return render_template('propose-name.html', username=username, name=name, email=email)
 
 
 @app.route("/send-mail-again/<email>")
 def mail_again(email):
     with app.app_context():
         vote = query_db('SELECT * FROM votes WHERE email = ?', [email], one=True)
-    if vote and vote['validate_date']:
-        return render_template('already-voted.html', name=vote['name'], email=vote['email'], vote_date=vote['vote_date'], validate_date=vote['validate_date'])
+    if vote and vote['validate_datetime']:
+        return render_template('already-voted.html', name=vote['name'], email=vote['email'], vote_datetime=vote['vote_datetime'], validate_datetime=vote['validate_datetime'])
     if vote:
         s = sendConfirmation().send(email, vote['token'], vote['name'])
         return render_template('check-your-mails.html')
 
     return redirect('/')
+
+
+@app.route("/moderate/<password>")
+def modaration_list(password):
+    config = get_config()
+    if password !=  config.get('ADMIN_PASSWORD'):
+        return redirect('/')
+
+    with app.app_context():
+        propositions = query_db('SELECT * FROM proposed_names', [])
+    return render_template('moderate-list.html', propositions=propositions)
+
+
+
+    # if vote and vote['validate_datetime']:
+    #     return render_template('already-voted.html', name=vote['name'], email=vote['email'], vote_datetime=vote['vote_datetime'], validate_datetime=vote['validate_datetime'])
+    # if vote:
+    #     s = sendConfirmation().send(email, vote['token'], vote['name'])
+    #     return render_template('check-your-mails.html')
+
+    return redirect('/')
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000, debug=True)

@@ -1,0 +1,10 @@
+{% extends "single.html" %}
+{% block s_heading %}Users propositions{% endblock %}
+{% block s_content %}
+
+<ul>
+  {% for proposition in propositions %}
+  <li><q>{{ proposition.name }}</q> by <q>{{ proposition.username }}</q> ({{ proposition.email }})</li>
+  {% endfor %}
+</ul>
+{% endblock %}
