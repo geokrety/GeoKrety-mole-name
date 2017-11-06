@@ -16,6 +16,10 @@ body {
   font-family: 'arial unicode MS', arial, geneva, sans-serif;
 }
 
+.by-user {
+  font-style: italic;
+}
+
 
 /* Sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

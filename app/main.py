@@ -271,21 +271,22 @@ def propose_name(name):
         username = request.form['username']
         email = request.form['email']
 
-        name = name.replace('g', 'G', 1).replace('k', 'K', 1)
+        if name and username and email and 'g' in name and 'k' in name:
+            name = name.replace('g', 'G', 1).replace('k', 'K', 1)
 
-        with app.app_context():
-            result = query_db('SELECT * FROM names WHERE name = ?', [name])
-            if result:
-                return render_template('already-proposed-error.html')
-            result = query_db('SELECT * FROM proposed_names WHERE name = ?', [name])
-            if result:
-                return render_template('already-proposed-error.html')
+            with app.app_context():
+                result = query_db('SELECT * FROM names WHERE name = ?', [name])
+                if result:
+                    return render_template('already-proposed-error.html')
+                result = query_db('SELECT * FROM proposed_names WHERE name = ?', [name])
+                if result:
+                    return render_template('already-proposed-error.html')
 
-        result = insert_db('proposed_names', ('username', 'name', 'email'), (username, name, email))
-        if not result:
-            return render_template('saving-propose-error.html')
-        sendProposition().send(name)
-        return render_template('saving-for-review.html')
+            result = insert_db('proposed_names', ('username', 'name', 'email'), (username, name, email))
+            if not result:
+                return render_template('saving-propose-error.html')
+            sendProposition().send(name)
+            return render_template('saving-for-review.html')
 
     return render_template('propose-name.html', username=username, name=name, email=email)
 
@@ -329,7 +330,7 @@ def modaration_validate(password, id):
     with app.app_context():
         proposition = query_db('SELECT * FROM proposed_names WHERE id = ?', [id], one=True)
         if proposition:
-            result = insert_db('names', ('name',), (proposition['name'],))
+            result = insert_db('names', ('name', 'username'), (proposition['name'], proposition['username']))
             if not result:
                 return render_template('saving-propose-error.html')
             delete_db('proposed_names', [id])

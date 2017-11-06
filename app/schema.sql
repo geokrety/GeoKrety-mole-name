@@ -2,6 +2,7 @@
 CREATE TABLE IF NOT EXISTS names
 (
     name VARCHAR(128) PRIMARY KEY,
+    username VARCHAR(128),
     rate DOUBLE DEFAULT 0.0 NOT NULL
 );
 
