@@ -57,7 +57,7 @@
       {% endif %}
       {% endfor %}
     </div>
-    {% if names|length % 6 > 0 and vote_step == '1' %}
+    {% if vote_step == '1' and (names|length % 6 > 0 or names|length <= 9)  %}
     <div class="row">
       <div class="column value mole-name">
         <a class="button button-primary" href="{{url_for('propose_name')}}">{{_('Want to propose something else?')}}</a>
