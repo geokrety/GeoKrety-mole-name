@@ -11,20 +11,20 @@
     <form method="POST">
       <div class="row">
         <div class="four columns">
-          <label for="newNameInput">{{_('I propose as the mascot name')}}</label>
+          <label for="newNameInput">{{_('I suggest as the mascot name:')}}</label>
           <input class="u-full-width" placeholder="{{_('Some name')}}" id="newNameInput" name="name" type="text" value="{{name}}" required>
         </div>
         <div class="four columns">
-          <label for="usernameInput">{{_('Your username')}}</label>
+          <label for="usernameInput">{{_('Your username:')}}</label>
           <input class="u-full-width" placeholder="{{_('Username')}}" id="usernameInput" name="username" type="text" value="{{username}}" required>
         </div>
         <div class="four columns">
-          <label for="emailInput">{{_('Your email')}}</label>
+          <label for="emailInput">{{_('Your email:')}}</label>
           <input class="u-full-width" placeholder="test@mailbox.com" id="emailInput" name="email" type="email" value="{{email}}" required>
         </div>
       </div>
 
-      <input class="button-primary u-max-full-width" value="{{_('Propose')}}" type="submit">
+      <input class="button-primary u-max-full-width" value="{{_('Suggest')}}" type="submit">
     </form>
     <p>{{_('Your mail address will only be used to validate your vote, we will never share it with other parties.')}}</p>
 {% endblock %}

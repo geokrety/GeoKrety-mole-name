@@ -257,10 +257,10 @@ def check_your_mails():
     return render_template('check-your-mails.html')
 
 
-@app.route("/propose-name/<name>", methods=['GET', 'POST'])
-@app.route("/<lang_code>/propose-name/<name>", methods=['GET', 'POST'])
-@app.route("/propose-name", defaults={'name': ''}, methods=['GET', 'POST'])
-@app.route("/<lang_code>/propose-name", defaults={'name': ''}, methods=['GET', 'POST'])
+@app.route("/suggest-name/<name>", methods=['GET', 'POST'])
+@app.route("/<lang_code>/suggest-name/<name>", methods=['GET', 'POST'])
+@app.route("/suggest-name", defaults={'name': ''}, methods=['GET', 'POST'])
+@app.route("/<lang_code>/suggest-name", defaults={'name': ''}, methods=['GET', 'POST'])
 def propose_name(name):
     if get_config().get('VOTE_STEP') != '1':
         return redirect(url_for('index'))

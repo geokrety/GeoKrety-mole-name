@@ -29,8 +29,8 @@
 
     <p>{{_('The vote will take place in three steps.')}}</p>
     <ol>
-      <li>{% if vote_step == '1' %}<b>&#8594;{% endif %}{{_('We collect your propositions')}}{% if vote_step == '1' %}&#8592;</b>{% endif %}</li>
-      <li>{% if vote_step == '2' %}<b>&#8594;{% endif %}{{_('A comitee will elect 5 propositions')}}{% if vote_step == '2' %}&#8592;</b>{% endif %}</li>
+      <li>{% if vote_step == '1' %}<b>&#8594;{% endif %}{{_('We collect your suggestions')}}{% if vote_step == '1' %}&#8592;</b>{% endif %}</li>
+      <li>{% if vote_step == '2' %}<b>&#8594;{% endif %}{{_('A comitee will elect 5 of your suggestions')}}{% if vote_step == '2' %}&#8592;</b>{% endif %}</li>
       <li>{% if vote_step == '3' %}<b>&#8594;{% endif %}{{_('You vote for your prefered name')}}{% if vote_step == '3' %}&#8592;</b>{% endif %}</li>
     </ol>
 
@@ -49,7 +49,7 @@
     {% if vote_step == '1' and loop.index is divisibleby(9) %}
     <div class="row">
       <div class="column value mole-name">
-        <a class="button button-primary" href="{{url_for('propose_name')}}">{{_('Want to propose something else?')}}</a>
+        <a class="button button-primary" href="{{url_for('propose_name')}}">{{_('Want to suggest something else?')}}</a>
       </div>
     </div>
     {% endif %}
@@ -60,7 +60,7 @@
     {% if vote_step == '1' and (names|length % 6 > 0 or names|length <= 9)  %}
     <div class="row">
       <div class="column value mole-name">
-        <a class="button button-primary" href="{{url_for('propose_name')}}">{{_('Want to propose something else?')}}</a>
+        <a class="button button-primary" href="{{url_for('propose_name')}}">{{_('Want to suggest something else?')}}</a>
       </div>
     </div>
     {% endif %}
