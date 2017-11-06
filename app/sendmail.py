@@ -53,35 +53,48 @@ class send:
 
 
 class sendConfirmation(send):
-    def send(self, to, token, name):
+    def send(self, email, token, name):
         subject = render_template('send-confirmation-subject.html')
         url = self.config.get('SITE_BASE', "https://molename.geokrety.org") + url_for('validate', token=token)
         text = render_template('send-confirmation-text.html', name=name, url=url)
         html = render_template('send-confirmation.html', name=name, url=url)
-        self._send(to, subject, text, html)
+        self._send(email, subject, text, html)
 
 
 class sendProposition(send):
-    def send(self, name):
+    def send(self, username, name):
+        url = self.config.get('SITE_BASE', "https://molename.geokrety.org") + url_for('moderation_list', password=self.config.get('ADMIN_PASSWORD'))
         subject = "GeoKrety - New mole name proposition"
-        text = """Hi!\nSomeone proposed a new mole name: "%s".\nPlease review the proposition at %s/moderate/%s""" % (
-            name,
-            self.config.get('SITE_BASE', "https://molename.geokrety.org"),
-            self.config.get('ADMIN_PASSWORD'),
-        )
+        text = """Hi!\n'%s' proposed a new mole name: "%s".\nPlease review the proposition at %s""" % (username, name, url)
         html = """\
         <html>
           <head></head>
           <body>
             <p>Hi!<br>
                Someone proposed a new mole name: <q>%s</q>.<br>
-               Please <a href="%s/moderate/%s">review the proposition</a>.
+               Please <a href="%s">review the proposition</a>.
             </p>
           </body>
         </html>
-        """ % (
-            name,
-            self.config.get('SITE_BASE', "https://molename.geokrety.org"),
-            self.config.get('ADMIN_PASSWORD'),
-        )
+        """ % (name, url)
         self._send(self.config.get('EMAIL_FROM', "geokrety@gmail.com"), subject, text, html)
+
+
+class sendValidatedProposition(send):
+    def send(self, username, email, name):
+        url = self.config.get('SITE_BASE', "https://molename.geokrety.org") + url_for('moderation_list', password=self.config.get('ADMIN_PASSWORD'))
+        subject = "GeoKrety - Your name proposition has been accepted"
+        text = """Congratulation %s!\nYour name proposition (%s) has been accepted by a moderator.\nThanks again for your participation.\n\nThe GK Team""" % (username, name)
+        html = """\
+        <html>
+          <head></head>
+          <body>
+            <p>Congratulation %s!<br>
+               Your name proposition (%s) has been accepted by a moderator.<br>
+               Thanks again for your participation.
+            </p>
+            <p>The GK Team</p>
+          </body>
+        </html>
+        """ % (username, name)
+        self._send(email, subject, text, html)

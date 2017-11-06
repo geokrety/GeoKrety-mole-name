@@ -7,7 +7,7 @@ from flask import (Flask, abort, g, redirect, render_template, request,
                    send_from_directory, url_for)
 from flask_babel import Babel
 from ihih import IHIH
-from sendmail import sendConfirmation, sendProposition
+from sendmail import sendConfirmation, sendProposition, sendValidatedProposition
 
 app = Flask(__name__)
 app.jinja_env.auto_reload = True
@@ -285,7 +285,7 @@ def propose_name(name):
             result = insert_db('proposed_names', ('username', 'name', 'email'), (username, name, email))
             if not result:
                 return render_template('saving-propose-error.html')
-            sendProposition().send(name)
+            sendProposition().send(username, name)
             return render_template('saving-for-review.html')
 
     return render_template('propose-name.html', username=username, name=name, email=email)
@@ -334,6 +334,7 @@ def modaration_validate(password, id):
             if not result:
                 return render_template('saving-propose-error.html')
             delete_db('proposed_names', [id])
+            s = sendValidatedProposition().send(proposition['username'], proposition['email'], proposition['name'])
 
     return redirect(url_for('moderation_list', password=password))
 
