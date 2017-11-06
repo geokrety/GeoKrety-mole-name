@@ -17,7 +17,7 @@
     </form>
     {% elif not validate_datetime %}
     <h4 class="section-description">
-      {{_('Be careful you didn\'t validated your vote!')}}
+      {{_('Be careful you didn\'t validate your vote!')}}
     </h4>
     <a class="button button-primary" href="{{url_for('mail_again', email=email)}}">{{_('Send validation link again')}}</a>
     {% endif %}
