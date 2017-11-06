@@ -20,6 +20,7 @@ app.config['SUPPORTED_LANGUAGES'] = {
     'fr': 'Francais',
     'no': 'Norsk',
     'it': 'Italiano',
+    'de': 'Deutsch',
 }
 
 babel = Babel(app)
