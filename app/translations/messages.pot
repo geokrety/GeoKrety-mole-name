@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-11-05 19:32+0000\n"
+"POT-Creation-Date: 2017-11-06 20:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -86,28 +86,49 @@ msgid "I want to vote!"
 msgstr ""
 
 #: app/templates/index.html:28
-msgid "Select your prefered name."
+msgid "Take part to the poll."
+msgstr ""
+
+#: app/templates/index.html:30
+msgid "The vote will take place in three steps."
+msgstr ""
+
+#: app/templates/index.html:32
+msgid "We collect your propositions"
+msgstr ""
+
+#: app/templates/index.html:33
+msgid "A comitee will elect 5 propositions"
 msgstr ""
 
 #: app/templates/index.html:34
+msgid "You vote for your prefered name"
+msgstr ""
+
+#: app/templates/index.html:43
 msgid "Vote"
 msgstr ""
 
-#: app/templates/index.html:44
+#: app/templates/index.html:45
+#, python-format
+msgid "By %(username)s"
+msgstr ""
+
+#: app/templates/index.html:52 app/templates/index.html:63
 msgid "Want to propose something else?"
 msgstr ""
 
-#: app/templates/index.html:52
+#: app/templates/index.html:72
 msgid "Other community poll"
 msgstr ""
 
-#: app/templates/index.html:53
+#: app/templates/index.html:73
 msgid ""
 "We are also looking for your help for designing a nice official KretyCoin"
 " to celebrate our 10th aniversary."
 msgstr ""
 
-#: app/templates/index.html:54
+#: app/templates/index.html:74
 msgid "Let me give my opinion"
 msgstr ""
 

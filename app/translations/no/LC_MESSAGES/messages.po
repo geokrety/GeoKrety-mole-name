@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: geokrety\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-11-05 19:32+0000\n"
-"PO-Revision-Date: 2017-11-05 14:57-0500\n"
+"POT-Creation-Date: 2017-11-06 20:31+0000\n"
+"PO-Revision-Date: 2017-11-06 15:33-0500\n"
 "Last-Translator: geokrety <geokrety@gmail.com>\n"
 "Language-Team: Norwegian\n"
 "MIME-Version: 1.0\n"
@@ -84,26 +84,47 @@ msgid "I want to vote!"
 msgstr "Jeg vil stemme!"
 
 #: app/templates/index.html:28
-msgid "Select your prefered name."
-msgstr "Velg yndlingsnavnet ditt."
+msgid "Take part to the poll."
+msgstr ""
+
+#: app/templates/index.html:30
+msgid "The vote will take place in three steps."
+msgstr ""
+
+#: app/templates/index.html:32
+msgid "We collect your propositions"
+msgstr ""
+
+#: app/templates/index.html:33
+msgid "Selection by a comitee"
+msgstr ""
 
 #: app/templates/index.html:34
+msgid "You vote for your prefered name"
+msgstr ""
+
+#: app/templates/index.html:43
 msgid "Vote"
 msgstr "Stem"
 
-#: app/templates/index.html:44
+#: app/templates/index.html:45
+#, python-format
+msgid "By %(username)s"
+msgstr ""
+
+#: app/templates/index.html:52 app/templates/index.html:63
 msgid "Want to propose something else?"
 msgstr "Vil du foreslå noe annet?"
 
-#: app/templates/index.html:52
+#: app/templates/index.html:72
 msgid "Other community poll"
 msgstr "Andre fellesskapsavstemninger"
 
-#: app/templates/index.html:53
+#: app/templates/index.html:73
 msgid "We are also looking for your help for designing a nice official KretyCoin to celebrate our 10th aniversary."
 msgstr "Vi ser også etter hjelp til å designe en fin offisiell KretyCoin for å feire det 10. jubileet vårt."
 
-#: app/templates/index.html:54
+#: app/templates/index.html:74
 msgid "Let me give my opinion"
 msgstr "La meg gi deg meningen min"
 

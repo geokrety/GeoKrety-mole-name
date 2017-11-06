@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: geokrety\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-11-05 19:32+0000\n"
-"PO-Revision-Date: 2017-11-05 14:35-0500\n"
+"POT-Creation-Date: 2017-11-06 20:35+0000\n"
+"PO-Revision-Date: 2017-11-06 15:36-0500\n"
 "Last-Translator: geokrety <geokrety@gmail.com>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -84,26 +84,47 @@ msgid "I want to vote!"
 msgstr "Je veux voter !"
 
 #: app/templates/index.html:28
-msgid "Select your prefered name."
-msgstr "Sélectionnez votre nom préféré."
+msgid "Take part to the poll."
+msgstr "Participer au sondage."
+
+#: app/templates/index.html:30
+msgid "The vote will take place in three steps."
+msgstr "Le vote se déroulera en trois étapes."
+
+#: app/templates/index.html:32
+msgid "We collect your propositions"
+msgstr "Nous collectons vos propositions"
+
+#: app/templates/index.html:33
+msgid "A comitee will elect 5 propositions"
+msgstr "Une Comité élira 5 propositions"
 
 #: app/templates/index.html:34
+msgid "You vote for your prefered name"
+msgstr "Vous votez pour votre nom préféré"
+
+#: app/templates/index.html:43
 msgid "Vote"
 msgstr "Voter"
 
-#: app/templates/index.html:44
+#: app/templates/index.html:45
+#, python-format
+msgid "By %(username)s"
+msgstr "Par %(username)s"
+
+#: app/templates/index.html:52 app/templates/index.html:63
 msgid "Want to propose something else?"
 msgstr "Vous voulez proposer quelque chose d’autre ?"
 
-#: app/templates/index.html:52
+#: app/templates/index.html:72
 msgid "Other community poll"
 msgstr "Autre sondage communautaire"
 
-#: app/templates/index.html:53
+#: app/templates/index.html:73
 msgid "We are also looking for your help for designing a nice official KretyCoin to celebrate our 10th aniversary."
 msgstr "Nous avons également besoin de votre aide pour concevoir un joli KretyCoin officiel afin de célébrer notre 10ème anniversaire."
 
-#: app/templates/index.html:54
+#: app/templates/index.html:74
 msgid "Let me give my opinion"
 msgstr "Je veux donner mon avis"
 

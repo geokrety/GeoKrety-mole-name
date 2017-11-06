@@ -30,7 +30,7 @@
     <p>{{_('The vote will take place in three steps.')}}</p>
     <ol>
       <li>{% if vote_step == '1' %}<b>&#8594;{% endif %}{{_('We collect your propositions')}}{% if vote_step == '1' %}&#8592;</b>{% endif %}</li>
-      <li>{% if vote_step == '2' %}<b>&#8594;{% endif %}{{_('Selection by a comitee')}}{% if vote_step == '2' %}&#8592;</b>{% endif %}</li>
+      <li>{% if vote_step == '2' %}<b>&#8594;{% endif %}{{_('A comitee will elect 5 propositions')}}{% if vote_step == '2' %}&#8592;</b>{% endif %}</li>
       <li>{% if vote_step == '3' %}<b>&#8594;{% endif %}{{_('You vote for your prefered name')}}{% if vote_step == '3' %}&#8592;</b>{% endif %}</li>
     </ol>
 
