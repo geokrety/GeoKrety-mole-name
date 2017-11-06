@@ -20,6 +20,16 @@ body {
   font-style: italic;
 }
 
+.error {
+  border-radius: 6px;
+  color: #a94442;
+  border: 1px solid #ebccd1;;
+  background-color: #f2dede;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
 
 /* Sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

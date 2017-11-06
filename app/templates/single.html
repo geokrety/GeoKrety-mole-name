@@ -2,6 +2,11 @@
 {% block content %}
 <div class="section values">
   <div class="container">
+    {% if msg and msg == 'FILL_ALL_FIELDS' %}
+      <div class="error">{{_('Please fill all fields')}}</div>
+    {% elif msg and msg == 'MUST_CONTAIN_G_K' %}
+      <div class="error">{{_('The name must contains letters <q>G</q> and <q>K</q> in that order')}}</div>
+    {% endif %}
     <h1 class="section-heading">{% block s_heading %}{% endblock %}</h1>
     <img src="/static/images/the-mole.svg">
     {% block s_content %}{% endblock %}

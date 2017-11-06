@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-11-06 21:16+0000\n"
+"POT-Creation-Date: 2017-11-06 22:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -125,7 +125,7 @@ msgstr ""
 #: app/templates/index.html:73
 msgid ""
 "We are also looking for your help for designing a nice official KretyCoin"
-" to celebrate our 10th aniversary."
+" to celebrate our 10th anniversary."
 msgstr ""
 
 #: app/templates/index.html:74
@@ -149,11 +149,11 @@ msgid "Don't hesitate to submit your favorite and cute name."
 msgstr ""
 
 #: app/templates/propose-name.html:7
-msgid "Name must not be offensive"
+msgid "The name must not be offensive"
 msgstr ""
 
-#: app/templates/propose-name.html:8
-msgid "Name must contains letters <q>G</q> and <q>K</q> in that order"
+#: app/templates/propose-name.html:8 app/templates/single.html:8
+msgid "The name must contains letters <q>G</q> and <q>K</q> in that order"
 msgstr ""
 
 #: app/templates/propose-name.html:14
@@ -230,6 +230,10 @@ msgid ""
 "        Thanks you for participating in finding our mascot a name.<br>\n"
 "        You have voted for <q>%(name)s</q><br>\n"
 "        Please click to <a href=\"%(url)s\">validate your vote</a>."
+msgstr ""
+
+#: app/templates/single.html:6
+msgid "Please fill all fields"
 msgstr ""
 
 #: app/templates/single.html:14
