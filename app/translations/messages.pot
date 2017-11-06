@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-11-06 22:02+0000\n"
+"POT-Creation-Date: 2017-11-06 22:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,6 +53,14 @@ msgstr ""
 
 #: app/templates/base.html:9
 msgid "GeoKrety Mascot name"
+msgstr ""
+
+#: app/templates/base.html:46
+msgid "A question?"
+msgstr ""
+
+#: app/templates/base.html:47
+msgid "Contact us"
 msgstr ""
 
 #: app/templates/check-your-mails.html:2
