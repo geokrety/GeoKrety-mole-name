@@ -272,22 +272,26 @@ def propose_name(name):
         username = request.form['username']
         email = request.form['email']
 
-        if name and username and email and 'g' in name and 'k' in name:
-            name = name.replace('g', 'G', 1).replace('k', 'K', 1)
+        if not (name and username and email):
+            return render_template('propose-name.html', username=username, name=name, email=email, msg="FILL_ALL_FIELDS")
+        if not ('g' in name and 'k' in name):
+            return render_template('propose-name.html', username=username, name=name, email=email, msg="MUST_CONTAIN_G_K")
 
-            with app.app_context():
-                result = query_db('SELECT * FROM names WHERE name = ?', [name])
-                if result:
-                    return render_template('already-proposed-error.html')
-                result = query_db('SELECT * FROM proposed_names WHERE name = ?', [name])
-                if result:
-                    return render_template('already-proposed-error.html')
+        name = name.replace('g', 'G', 1).replace('k', 'K', 1)
 
-            result = insert_db('proposed_names', ('username', 'name', 'email'), (username, name, email))
-            if not result:
-                return render_template('saving-propose-error.html')
-            sendProposition().send(username, name)
-            return render_template('saving-for-review.html')
+        with app.app_context():
+            result = query_db('SELECT * FROM names WHERE name = ?', [name])
+            if result:
+                return render_template('already-proposed-error.html')
+            result = query_db('SELECT * FROM proposed_names WHERE name = ?', [name])
+            if result:
+                return render_template('already-proposed-error.html')
+
+        result = insert_db('proposed_names', ('username', 'name', 'email'), (username, name, email))
+        if not result:
+            return render_template('saving-propose-error.html')
+        sendProposition().send(username, name)
+        return render_template('saving-for-review.html')
 
     return render_template('propose-name.html', username=username, name=name, email=email)
 
