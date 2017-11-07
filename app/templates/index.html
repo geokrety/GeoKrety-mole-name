@@ -1,4 +1,19 @@
 {% extends "base.html" %} {% block content %}
+<div class="container">
+  <div class="row">
+    <ul class="languagepicker roundborders large">
+      <li><img class="language_icon" src="{{url_for('send_static', path='images/Language_icon.svg')}}" />Language</li>
+      <li><a href="{{url_for('index', lang_code='de')}}"><span class="flag-icon flag-icon-de"></span>German</a></li>
+      <li><a href="{{url_for('index', lang_code='en')}}"><span class="flag-icon flag-icon-us"></span>English</a></li>
+      <li><a href="{{url_for('index', lang_code='fr')}}"><span class="flag-icon flag-icon-fr"></span>Français</a></li>
+      <li><a href="{{url_for('index', lang_code='it')}}"><span class="flag-icon flag-icon-it"></span>Italiano</a></li>
+      <li><a href="{{url_for('index', lang_code='no')}}"><span class="flag-icon flag-icon-no"></span>Norsk</a></li>
+      <li><a href="{{url_for('index', lang_code='pl')}}"><span class="flag-icon flag-icon-pl"></span>Polskie</a></li>
+    </ul>
+  </div>
+</div>
+
+
 <div class="section hero">
   <div class="container">
     <div class="row">
@@ -37,11 +52,9 @@
     <div class="row">
       {% for value in names %}
       <div class="one-third column value mole-name">
-        <h2 class="value-multiplier">{{value.name}}</h2>
-        {% if vote_step == '3' %}
+        <h2 class="value-multiplier">{{value.name}}</h2> {% if vote_step == '3' %}
         <h5 class="value-heading">{{'%0.2f'| format(value.rate|float)}}%</h5>
-        <a class="button button-primary" href="{{url_for('vote', name=value.name)}}">{{_('Vote')}}</a>
-        {% endif %}
+        <a class="button button-primary" href="{{url_for('vote', name=value.name)}}">{{_('Vote')}}</a> {% endif %}
         <p class="by-user">{{_('By %(username)s', username=value.username) }}</p>
       </div>
       {% if loop.index is divisibleby(3) %}
@@ -54,17 +67,16 @@
     </div>
     {% endif %}
     <div class="row">
-      {% endif %}
-      {% endfor %}
+      {% endif %} {% endfor %}
     </div>
-    {% if vote_step == '1' and (names|length % 6 > 0 or names|length <= 9)  %}
-    <div class="row">
+    {% if vote_step == '1' and (names|length % 6 > 0 or names|length
+    <=9 ) %} <div class="row">
       <div class="column value mole-name">
         <a class="button button-primary" href="{{url_for('propose_name')}}">{{_('Want to suggest something else?')}}</a>
       </div>
-    </div>
-    {% endif %}
   </div>
+  {% endif %}
+</div>
 </div>
 
 <div class="section categories">

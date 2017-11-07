@@ -7,23 +7,9 @@ from flask import (Flask, abort, g, redirect, render_template, request,
                    send_from_directory, url_for)
 from flask_babel import Babel
 from ihih import IHIH
-from sendmail import sendConfirmation, sendProposition, sendValidatedProposition
-
-# https://stackoverflow.com/a/36033627/944936
-class PrefixMiddleware(object):
-
-    def __init__(self, app, prefix=''):
-        self.app = app
-        self.prefix = prefix
-
-    def __call__(self, environ, start_response):
-        if environ['PATH_INFO'].startswith(self.prefix):
-            environ['PATH_INFO'] = environ['PATH_INFO'][len(self.prefix):]
-            environ['SCRIPT_NAME'] = self.prefix
-            return self.app(environ, start_response)
-        else:
-            start_response('404', [('Content-Type', 'text/plain')])
-            return ["This url does not belong to the app.".encode()]
+from middleware import PrefixMiddleware
+from sendmail import (sendConfirmation, sendProposition,
+                      sendValidatedProposition)
 
 app = Flask(__name__)
 app.wsgi_app = PrefixMiddleware(app.wsgi_app, prefix='/molename')
@@ -89,6 +75,7 @@ def ensure_lang_support():
     if lang_code and lang_code not in app.config['SUPPORTED_LANGUAGES'].keys():
         return abort(404)
 
+
 def get_db():
     db = getattr(g, '_database', None)
     if db is None:
@@ -103,10 +90,12 @@ def close_connection(exception):
     if db is not None:
         db.close()
 
+
 @app.context_processor
 def inject_user():
     config = get_config()
     return dict(vote_step=config.get('VOTE_STEP', 1))
+
 
 def query_db(query, args=(), one=False):
     cur = get_db().execute(query, args)

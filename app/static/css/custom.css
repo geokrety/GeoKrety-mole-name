@@ -114,6 +114,74 @@ body {
 }
 
 
+/* Language picker
+https://codepen.io/axel1998/pen/RWOpXq
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+.languagepicker {
+	background-color: #FFF;
+	display: inline-block;
+	padding: 0;
+	height: 40px;
+	overflow: hidden;
+	transition: all .3s ease;
+	margin: 0 50px 10px 0;
+	vertical-align: top;
+	float: left;
+}
+
+.languagepicker:hover {
+	/* don't forget the 1px border */
+	height: 81px;
+}
+
+.languagepicker a{
+	color: #000;
+	text-decoration: none;
+}
+
+.languagepicker li {
+	display: block;
+	padding: 0px 20px;
+	line-height: 40px;
+	border-top: 1px solid #EEE;
+  margin: 0;
+}
+
+.languagepicker li:hover{
+	background-color: #EEE;
+}
+
+.languagepicker li span {
+	margin-right: 5px;
+}
+
+.languagepicker .language_icon {
+	width: 24px;
+  height: 20px;
+}
+
+.roundborders {
+	border-radius: 5px;
+}
+
+.large {
+  position: absolute;
+  z-index: 999;
+  right: 0px;
+}
+
+.large:hover {
+	/*
+	don't forget the 1px border!
+	The first language is 40px heigh,
+	the others are 41px
+	*/
+	height: 285px;
+}
+
+
 /* Bigger than 550 */
 
 @media (min-width: 550px) {
