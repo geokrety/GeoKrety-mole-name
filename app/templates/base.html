@@ -20,9 +20,9 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="/skeleton/css/normalize.css">
-  <link rel="stylesheet" href="/skeleton/css/skeleton.css">
-  <link rel="stylesheet" href="/static/css/custom.css">
+  <link rel="stylesheet" href="{{url_for('send_skeleton', path='css/normalize.css')}}">
+  <link rel="stylesheet" href="{{url_for('send_skeleton', path='css/skeleton.css')}}">
+  <link rel="stylesheet" href="{{url_for('send_static', path='css/custom.css')}}">
 
   <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -30,7 +30,7 @@
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="/skeleton/images/favicon.png">
+  <link rel="icon" type="image/png" href="{{url_for('send_skeleton', path='images/favicon.png')}}">
 
 </head>
 

@@ -67,7 +67,7 @@ body {
 }
 
 .values {
-  background-image: url('/static/images/values-bg.jpg');
+  background-image: url('/molename/static/images/values-bg.jpg');
   background-size: cover;
   color: #fff;
   padding-bottom: 5rem;
@@ -104,7 +104,7 @@ body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .categories {
-  background-image: url('/static/images/values-bg.jpg');
+  background-image: url('/molename/static/images/values-bg.jpg');
   background-size: cover;
   color: #fff;
 }
