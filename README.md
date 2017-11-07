@@ -28,3 +28,7 @@ We distribute a `Dockerfile` and `docker-compose.yml` to help you start.
 To initialize a new language, declare it in `app/main.py`, and launch `docker exec -it geokretymascottname_geokrety-mole-name_1 pybabel init -i app/translations/messages.pot -d app/translations -l <lang_code>`
 
 Note: Norwegian have a problem, locale is recognized as `nb`. See https://github.com/python-babel/flask-babel/issues/61
+
+## Wanna help translate?
+
+Nice! Please join us on crowdin https://crowdin.com/project/geokrety
