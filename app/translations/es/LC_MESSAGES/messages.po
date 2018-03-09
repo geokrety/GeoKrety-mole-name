@@ -3,9 +3,9 @@ msgstr ""
 "Project-Id-Version: geokrety\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2017-11-06 22:50+0000\n"
-"PO-Revision-Date: 2018-03-09 17:56-0500\n"
+"PO-Revision-Date: 2018-03-09 17:58-0500\n"
 "Last-Translator: geokrety <geokrety@gmail.com>\n"
-"Language-Team: German\n"
+"Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,205 +13,205 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: geokrety\n"
-"X-Crowdin-Language: de\n"
+"X-Crowdin-Language: es-ES\n"
 "X-Crowdin-File: the_mole_with_no_name.pot\n"
-"Language: de_DE\n"
+"Language: es_ES\n"
 
 #: app/templates/already-proposed-error.html:2
 msgid "Thanks for your suggestion."
-msgstr "Danke für deinen Vorschlag."
+msgstr "Gracias por tu sugerencia."
 
 #: app/templates/already-proposed-error.html:4
 msgid "But this name was already suggested."
-msgstr "aber dieser Name wurde bereits vorgeschlagen."
+msgstr "Pero este nombre ya fue sugerido."
 
 #: app/templates/already-voted.html:2
 msgid "You have already voted"
-msgstr "Du hast bereits abgestimmt"
+msgstr "Ya has votado"
 
 #: app/templates/already-voted.html:5
 #, python-format
 msgid "for <q>%(name)s</q> on %(vote_datetime)s"
-msgstr "für <q>%(name)s</q> am %(vote_datetime)s"
+msgstr "para <q>%(name)s</q> en %(vote_datetime)s"
 
 #: app/templates/already-voted.html:10
 #, python-format
 msgid "Do you want to change your vote for <q>%(new_name)s"
-msgstr "Möchtest du deine Stimme für <q>%(new_name)s ändern"
+msgstr "¿Quieres cambiar tu voto por <q>%(new_name)s?"
 
 #: app/templates/already-voted.html:16
 msgid "Yes, change my vote"
-msgstr "Ja, meine Stimme ändern"
+msgstr "Sí, cambia mi voto"
 
 #: app/templates/already-voted.html:20
 msgid "Be careful you didn't validate your vote!"
-msgstr "Achtung, du hast deine Abstimmung nicht bestätigt!"
+msgstr "¡Cuidado! ¡No validaste tu voto!"
 
 #: app/templates/already-voted.html:22
 msgid "Send validation link again"
-msgstr "Bestätigungs-Link erneut zusenden"
+msgstr "Enviar enlace de validación otra vez"
 
 #: app/templates/base.html:9
 msgid "GeoKrety Mascot name"
-msgstr "GeoKrety-Maskottchen Name"
+msgstr "Nombre de Mascota GeoKrety"
 
 #: app/templates/base.html:46
 msgid "A question?"
-msgstr "Fragen?"
+msgstr "¿Pregunta?"
 
 #: app/templates/base.html:47
 msgid "Contact us"
-msgstr "Kontaktiere uns"
+msgstr "Contáctanos"
 
 #: app/templates/check-your-mails.html:2
 msgid "Now, check your mails"
-msgstr "Prüfe jetzt deine E-Mails"
+msgstr "Ahora, verifica tus correos"
 
 #: app/templates/check-your-mails.html:4
 msgid "and click the validation link."
-msgstr "und klicke den Bestätigungs-Link."
+msgstr "y has clic en el enlace de validación."
 
 #: app/templates/index.html:6
 msgid "Do you know the GeoKrety mascot name?"
-msgstr "Kennst du den Namen des GeoKrety-Masskottchens?"
+msgstr "¿Sabes el nombre de la mascota de GeoKrety?"
 
 #: app/templates/index.html:7
 msgid "No? Normal, It doesn't have one yet!"
-msgstr "Nein? Richtig, denn es hat noch keinen!"
+msgstr "¿No? Es normal ¡aún no tiene uno!"
 
 #: app/templates/index.html:19
 msgid "We need your opinion to choose one!"
-msgstr "Wir brauchen deine Meinung um einen Namen auszuwählen!"
+msgstr "¡Necesitamos tu opinión para escoger uno!"
 
 #: app/templates/index.html:20
 msgid "GeoKrety is nothing without you, and as a community we hear your voice. Make GeoKrety yours and vote for your favorite name!"
-msgstr "GeoKrety ist nichts ohne dich als Nutzer, und als Community hören wir auf deine Stimme. Gestalte GeoKrety selbst und stimme für deinen Lieblingsnamen ab!"
+msgstr "GeoKrety es nada sin ti, y como una comunidad queremos escuchar tu voz. ¡Has GeoKrety tuyo y vota por tu nombre favorito!"
 
 #: app/templates/index.html:21
 msgid "I want to vote!"
-msgstr "Ich möchte abstimmen!"
+msgstr "¡Quier votar!"
 
 #: app/templates/index.html:28
 msgid "Take part to the poll."
-msgstr "Nimm an der Umfrage teil."
+msgstr "Participa en la encuesta."
 
 #: app/templates/index.html:30
 msgid "The vote will take place in three steps."
-msgstr "Die Abstimmung erfolgt in drei Schritten."
+msgstr "El voto tomará lugar en tres pasos."
 
 #: app/templates/index.html:32
 msgid "We collect your suggestions"
-msgstr "Wir sammeln eure Vorschläge"
+msgstr "Juntamos sus sugerencias"
 
 #: app/templates/index.html:33
 msgid "A comitee will elect 5 of your suggestions"
-msgstr "Ein Komitee wählt fünf der Vorschläge aus"
+msgstr "Un comité eligirá 5 de tus sugerencias"
 
 #: app/templates/index.html:34
 msgid "You vote for your prefered name"
-msgstr "Ihr stimmst für euren Favoriten ab"
+msgstr "Vota por tu nombre preferido"
 
 #: app/templates/index.html:43
 msgid "Vote"
-msgstr "Abstimmen"
+msgstr "Voto"
 
 #: app/templates/index.html:45
 #, python-format
 msgid "By %(username)s"
-msgstr "Von %(username)s"
+msgstr "Por %(username)s"
 
 #: app/templates/index.html:52 app/templates/index.html:63
 msgid "Want to suggest something else?"
-msgstr "Möchtest du einen anderen Namen vorschlagen?"
+msgstr "¿Quieres sugerir algo más?"
 
 #: app/templates/index.html:72
 msgid "Other community poll"
-msgstr "Andere Community-Umfrage"
+msgstr "Otra encuesta de la comunidad"
 
 #: app/templates/index.html:73
 msgid "We are also looking for your help for designing a nice official KretyCoin to celebrate our 10th anniversary."
-msgstr "Wir brauchen deine Hilfe auch beim Design einer schönen offiziellen KretyCoin um unser 10. Jubiläum zu feiern."
+msgstr "También estamos buscando por tu ayuda para diseñar una linda KretyCoin oficial para celebrar nuestro 10 aniversario."
 
 #: app/templates/index.html:74
 msgid "Let me give my opinion"
-msgstr "Ich möchte meine Meinung mitteilen"
+msgstr "Déjame dar mi opinión"
 
 #: app/templates/no-such-token.html:2
 msgid "An error occured while saving you vote."
-msgstr "Beim Speichern deiner Stimme ist ein Fehler aufgetreten."
+msgstr "Un error ocurrió mientras guardaba tu voto."
 
 #: app/templates/no-such-token.html:4
 msgid "Invalid token."
-msgstr "Ungültiger Token."
+msgstr "Código inválido."
 
 #: app/templates/propose-name.html:2
 msgid "You have another idea?"
-msgstr "Hast du eine andere Idee?"
+msgstr "¿Tienes otra idea?"
 
 #: app/templates/propose-name.html:4
 msgid "Don't hesitate to submit your favorite and cute name."
-msgstr "Übermittle uns gerne deinen bevorzugten niedlichen Namen."
+msgstr "No dudes en subir tu favorito y lindo nombre."
 
 #: app/templates/propose-name.html:7
 msgid "The name must not be offensive"
-msgstr "Der Name darf nicht beleidigend sein"
+msgstr "El nombre no debe ser ofensivo"
 
 #: app/templates/propose-name.html:8 app/templates/single.html:8
 msgid "The name must contains letters <q>G</q> and <q>K</q> in that order"
-msgstr "Der Name muss die Buchstaben <q>G</q> und <q>K</q> in dieser Reihenfolge beinhalten"
+msgstr "El nombre debe contener letras <q>G</q> y <q>K</q> en ese orden"
 
 #: app/templates/propose-name.html:14
 msgid "I suggest as the mascot name:"
-msgstr "Ich schlage als Maskottchen-Name vor:"
+msgstr "Sugiero como el nombre de la mascota:"
 
 #: app/templates/propose-name.html:15
 msgid "Some name"
-msgstr "Ein Name"
+msgstr "Propuesta de nombre"
 
 #: app/templates/propose-name.html:18
 msgid "Your username:"
-msgstr "Dein Benutzername:"
+msgstr "Tu nombre de usuario:"
 
 #: app/templates/propose-name.html:19
 msgid "Username"
-msgstr "Benutzername"
+msgstr "Nombre de usuario"
 
 #: app/templates/propose-name.html:22
 msgid "Your email:"
-msgstr "Deine E-Mail:"
+msgstr "Tu correo electrónico:"
 
 #: app/templates/propose-name.html:27
 msgid "Suggest"
-msgstr "Vorschlagen"
+msgstr "Sugerencia"
 
 #: app/templates/propose-name.html:29 app/templates/vote.html:12
 msgid "Your mail address will only be used to validate your vote, we will never share it with other parties."
-msgstr "Deine E-Mail Adresse wird nur genutzt um die Abstimmung zu bestätigen, sie wird niemals mit Dritten geteilt."
+msgstr "Tu dirección de correo electrónico será usada sólo para validar tu voto, nunca compartiremos con terceras personas."
 
 #: app/templates/saving-for-review.html:2
 msgid "Thanks!"
-msgstr "Danke!"
+msgstr "¡Gracias!"
 
 #: app/templates/saving-for-review.html:4
 msgid "Your suggestion is now waiting for moderation."
-msgstr "Dein Vorschlag wartet nun auf Moderation."
+msgstr "Tu propuesta está esperando ahora por moderación."
 
 #: app/templates/saving-propose-error.html:2
 msgid "An error occured while saving your suggestion."
-msgstr "Beim Speichern deines Vorschlags ist ein Fehler aufgetreten."
+msgstr "Un error ocurrió mientras se guardaba tu sugerencia."
 
 #: app/templates/saving-propose-error.html:4
 #: app/templates/saving-vote-error.html:4
 msgid "Please try again later."
-msgstr "Bitte versuche es später erneut."
+msgstr "Por favor, inténtalo más tarde."
 
 #: app/templates/saving-vote-error.html:2
 msgid "An error occured while saving your vote."
-msgstr "Beim Speichern deiner Stimme ist ein Fehler aufgetreten."
+msgstr "Un error ocurrió mientras se guardaba tu voto."
 
 #: app/templates/send-confirmation-subject.html:1
 msgid "GeoKrety - Confirm your vote"
-msgstr "GeoKrety - Bestätige deine Wahl"
+msgstr "GeoKrety - confirma su voto"
 
 #: app/templates/send-confirmation-text.html:1
 #, python-format
@@ -219,10 +219,10 @@ msgid "Hi!\n\n"
 "Thanks you for participating in finding our mascot a name.\n\n"
 "You have voted for \"%(name)s\"\n\n"
 "Please click (or copy/paste) this link %(url)s to validate your vote.\n"
-msgstr "Hallo!\n\n"
-"Danke für deine Teilnahme bei der Namensfindung für unser Maskottchen.\n\n"
-"Du hast für \"%(name)s\" gestimmt\n\n"
-"Bitte klicke (oder kopiere) diesen Link %(url)s um deine Wahl zu bestätigen.\n"
+msgstr "¡Hola!\n\n"
+"Gracias por participar en encontrar el nombre de nuestra mascota.\n\n"
+"Tu has votado por \"%(name)s\"\n\n"
+"Por favor, has clic (o copia/pega) este enlace %(url)s para validar tu voto.\n"
 
 #: app/templates/send-confirmation.html:5
 #, python-format
@@ -230,45 +230,45 @@ msgid "Hi!<br>\n"
 "        Thanks you for participating in finding our mascot a name.<br>\n"
 "        You have voted for <q>%(name)s</q><br>\n"
 "        Please click to <a href=\"%(url)s\">validate your vote</a>."
-msgstr "Hallo!<br>\n"
-"        Danke für deine Teilnahme bei der Namensfindung für unser Maskottchen.<br>\n"
-"        Du hast für <q>\"%(name)s\"</q> gestimmt<br>\n"
-"        Bitte klicke um <a href=\"%(url)s\">deine Wahl zu bestätigen</a>."
+msgstr "¡Hola!<br>\n"
+"        Gracias por participar en encontrar un nombre de nuestra mascota.<br>\n"
+"        Has votado por <q>%(name)s</q><br>\n"
+"        Por favor, has clic en <a href=\"%(url)s\">para validar tu voto</a>."
 
 #: app/templates/single.html:6
 msgid "Please fill all fields"
-msgstr "Bitte alle Felder ausfüllen"
+msgstr "Por favor llena todos los campos"
 
 #: app/templates/single.html:14
 msgid "Back Home"
-msgstr "Zurück zur Startseite"
+msgstr "Vuelta a Inicio"
 
 #: app/templates/validate.html:2
 msgid "Thank you!"
-msgstr "Vielen Dank!"
+msgstr "¡Gracias!"
 
 #: app/templates/validate.html:4
 msgid "Your vote has been registered."
-msgstr "Deine Stimme wurde registriert."
+msgstr "Tu voto ha sido registrado."
 
 #: app/templates/vote.html:2
 msgid "You're one step close to finish."
-msgstr "Du bist einen Schritt vor dem Abschluss."
+msgstr "Estas a un paso más cerca de terminar."
 
 #: app/templates/vote.html:4
 #, python-format
 msgid "You want to call me <q>%(name)s</q>"
-msgstr "Du möchtest mich <q>%(name)s</q> nennen"
+msgstr "Quieres llamarme <q>%(name)s</q>"
 
 #: app/templates/vote.html:6
 msgid "Please enter your email and click the link in the mail you will receive to validate your choice."
-msgstr "Bitte gib deine E-Mail Adresse ein und klicke in der erhaltenen E-Mail den Link um deine Wahl zu bestätigen."
+msgstr "Por favor, ingresa tu corre electrónico y has clic en el enlace en el correo que recibirás para validar tu elección."
 
 #: app/templates/vote.html:8
 msgid "you@provider.net"
-msgstr "you@provider.net"
+msgstr "tu@proveedor.net"
 
 #: app/templates/vote.html:10
 msgid "Send me the validation link"
-msgstr "Schicke mir den Bestätigungs-Link"
+msgstr "Envíame el enlace de validación"
 

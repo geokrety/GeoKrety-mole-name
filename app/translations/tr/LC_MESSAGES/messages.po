@@ -3,9 +3,9 @@ msgstr ""
 "Project-Id-Version: geokrety\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2017-11-06 22:50+0000\n"
-"PO-Revision-Date: 2018-03-09 17:56-0500\n"
+"PO-Revision-Date: 2018-03-09 17:58-0500\n"
 "Last-Translator: geokrety <geokrety@gmail.com>\n"
-"Language-Team: German\n"
+"Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,205 +13,205 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: geokrety\n"
-"X-Crowdin-Language: de\n"
+"X-Crowdin-Language: tr\n"
 "X-Crowdin-File: the_mole_with_no_name.pot\n"
-"Language: de_DE\n"
+"Language: tr_TR\n"
 
 #: app/templates/already-proposed-error.html:2
 msgid "Thanks for your suggestion."
-msgstr "Danke für deinen Vorschlag."
+msgstr "Öneriniz için teşekkürler."
 
 #: app/templates/already-proposed-error.html:4
 msgid "But this name was already suggested."
-msgstr "aber dieser Name wurde bereits vorgeschlagen."
+msgstr "Fakat bu isim zaten önerilmiştir."
 
 #: app/templates/already-voted.html:2
 msgid "You have already voted"
-msgstr "Du hast bereits abgestimmt"
+msgstr "Zaten oylama yaptınız"
 
 #: app/templates/already-voted.html:5
 #, python-format
 msgid "for <q>%(name)s</q> on %(vote_datetime)s"
-msgstr "für <q>%(name)s</q> am %(vote_datetime)s"
+msgstr "for <q>%(name)s</q> on %(vote_datetime)s"
 
 #: app/templates/already-voted.html:10
 #, python-format
 msgid "Do you want to change your vote for <q>%(new_name)s"
-msgstr "Möchtest du deine Stimme für <q>%(new_name)s ändern"
+msgstr "Oyunuzu <q>%(new_name)s için değiştirmek istiyor musunuz"
 
 #: app/templates/already-voted.html:16
 msgid "Yes, change my vote"
-msgstr "Ja, meine Stimme ändern"
+msgstr "Evet, oyumu değiştir"
 
 #: app/templates/already-voted.html:20
 msgid "Be careful you didn't validate your vote!"
-msgstr "Achtung, du hast deine Abstimmung nicht bestätigt!"
+msgstr "Dikkatli olun, oyunuzu doğrulamadınız!"
 
 #: app/templates/already-voted.html:22
 msgid "Send validation link again"
-msgstr "Bestätigungs-Link erneut zusenden"
+msgstr "Doğrulama bağlantısını tekrar gönder"
 
 #: app/templates/base.html:9
 msgid "GeoKrety Mascot name"
-msgstr "GeoKrety-Maskottchen Name"
+msgstr "GeoKrety Maskot adı"
 
 #: app/templates/base.html:46
 msgid "A question?"
-msgstr "Fragen?"
+msgstr "Bir sorunuz mu var?"
 
 #: app/templates/base.html:47
 msgid "Contact us"
-msgstr "Kontaktiere uns"
+msgstr "Bize ulaşın"
 
 #: app/templates/check-your-mails.html:2
 msgid "Now, check your mails"
-msgstr "Prüfe jetzt deine E-Mails"
+msgstr "Şimdi, postalarınızı kontrol edin"
 
 #: app/templates/check-your-mails.html:4
 msgid "and click the validation link."
-msgstr "und klicke den Bestätigungs-Link."
+msgstr "ve doğrulama bağlantısına tıklayın."
 
 #: app/templates/index.html:6
 msgid "Do you know the GeoKrety mascot name?"
-msgstr "Kennst du den Namen des GeoKrety-Masskottchens?"
+msgstr "GeoKrety maskot adını biliyor musunuz?"
 
 #: app/templates/index.html:7
 msgid "No? Normal, It doesn't have one yet!"
-msgstr "Nein? Richtig, denn es hat noch keinen!"
+msgstr "Hayır mı? Normal, henüz yok!"
 
 #: app/templates/index.html:19
 msgid "We need your opinion to choose one!"
-msgstr "Wir brauchen deine Meinung um einen Namen auszuwählen!"
+msgstr "Bir tane seçmek için fikrinize ihtiyacımız var!"
 
 #: app/templates/index.html:20
 msgid "GeoKrety is nothing without you, and as a community we hear your voice. Make GeoKrety yours and vote for your favorite name!"
-msgstr "GeoKrety ist nichts ohne dich als Nutzer, und als Community hören wir auf deine Stimme. Gestalte GeoKrety selbst und stimme für deinen Lieblingsnamen ab!"
+msgstr "GeoKrety siz olmadan hiçbir şeydir ve topluluk olarak sesinizi duyuyoruz. GeoKrety'i kendinizin yapın ve favori isminiz için oy verin!"
 
 #: app/templates/index.html:21
 msgid "I want to vote!"
-msgstr "Ich möchte abstimmen!"
+msgstr "Oy vermek istiyorum!"
 
 #: app/templates/index.html:28
 msgid "Take part to the poll."
-msgstr "Nimm an der Umfrage teil."
+msgstr "Ankete katılın."
 
 #: app/templates/index.html:30
 msgid "The vote will take place in three steps."
-msgstr "Die Abstimmung erfolgt in drei Schritten."
+msgstr "Oylama 3 adımda gerçekleşecek."
 
 #: app/templates/index.html:32
 msgid "We collect your suggestions"
-msgstr "Wir sammeln eure Vorschläge"
+msgstr "Önerilerinizi topluyoruz"
 
 #: app/templates/index.html:33
 msgid "A comitee will elect 5 of your suggestions"
-msgstr "Ein Komitee wählt fünf der Vorschläge aus"
+msgstr "Bir komite 5 önerinizi seçecek"
 
 #: app/templates/index.html:34
 msgid "You vote for your prefered name"
-msgstr "Ihr stimmst für euren Favoriten ab"
+msgstr "Tercih isminiz için oy verin"
 
 #: app/templates/index.html:43
 msgid "Vote"
-msgstr "Abstimmen"
+msgstr "Oy ver"
 
 #: app/templates/index.html:45
 #, python-format
 msgid "By %(username)s"
-msgstr "Von %(username)s"
+msgstr "%(username)s tarafından"
 
 #: app/templates/index.html:52 app/templates/index.html:63
 msgid "Want to suggest something else?"
-msgstr "Möchtest du einen anderen Namen vorschlagen?"
+msgstr "Başka bir şey önermek istiyor musunuz?"
 
 #: app/templates/index.html:72
 msgid "Other community poll"
-msgstr "Andere Community-Umfrage"
+msgstr "Diğer topluluk anketi"
 
 #: app/templates/index.html:73
 msgid "We are also looking for your help for designing a nice official KretyCoin to celebrate our 10th anniversary."
-msgstr "Wir brauchen deine Hilfe auch beim Design einer schönen offiziellen KretyCoin um unser 10. Jubiläum zu feiern."
+msgstr "Ayrıca 10. yıl dönümümüzü kutlamak için güzel bir KretyCoin tasarlamak için yardım arıyoruz."
 
 #: app/templates/index.html:74
 msgid "Let me give my opinion"
-msgstr "Ich möchte meine Meinung mitteilen"
+msgstr "Fikrimi ver"
 
 #: app/templates/no-such-token.html:2
 msgid "An error occured while saving you vote."
-msgstr "Beim Speichern deiner Stimme ist ein Fehler aufgetreten."
+msgstr "Oyunuzu kaydederken bir hata oluştu."
 
 #: app/templates/no-such-token.html:4
 msgid "Invalid token."
-msgstr "Ungültiger Token."
+msgstr "Geçersiz token."
 
 #: app/templates/propose-name.html:2
 msgid "You have another idea?"
-msgstr "Hast du eine andere Idee?"
+msgstr "Başka fikriniz var mı?"
 
 #: app/templates/propose-name.html:4
 msgid "Don't hesitate to submit your favorite and cute name."
-msgstr "Übermittle uns gerne deinen bevorzugten niedlichen Namen."
+msgstr "Favori ve şirin adınızı sunmaktan çekinmeyin."
 
 #: app/templates/propose-name.html:7
 msgid "The name must not be offensive"
-msgstr "Der Name darf nicht beleidigend sein"
+msgstr "İsim saldırgan olmamalıdır"
 
 #: app/templates/propose-name.html:8 app/templates/single.html:8
 msgid "The name must contains letters <q>G</q> and <q>K</q> in that order"
-msgstr "Der Name muss die Buchstaben <q>G</q> und <q>K</q> in dieser Reihenfolge beinhalten"
+msgstr "İsim sırayla <q>G</q> ve <q>K</q> harflerini içermelidir"
 
 #: app/templates/propose-name.html:14
 msgid "I suggest as the mascot name:"
-msgstr "Ich schlage als Maskottchen-Name vor:"
+msgstr "Maskot adı olarak öneriyorum:"
 
 #: app/templates/propose-name.html:15
 msgid "Some name"
-msgstr "Ein Name"
+msgstr "Bazı isimler"
 
 #: app/templates/propose-name.html:18
 msgid "Your username:"
-msgstr "Dein Benutzername:"
+msgstr "Kullanıcı adınız:"
 
 #: app/templates/propose-name.html:19
 msgid "Username"
-msgstr "Benutzername"
+msgstr "Kullanıcı adı"
 
 #: app/templates/propose-name.html:22
 msgid "Your email:"
-msgstr "Deine E-Mail:"
+msgstr "E-Posta adresiniz:"
 
 #: app/templates/propose-name.html:27
 msgid "Suggest"
-msgstr "Vorschlagen"
+msgstr "Önerilen"
 
 #: app/templates/propose-name.html:29 app/templates/vote.html:12
 msgid "Your mail address will only be used to validate your vote, we will never share it with other parties."
-msgstr "Deine E-Mail Adresse wird nur genutzt um die Abstimmung zu bestätigen, sie wird niemals mit Dritten geteilt."
+msgstr "Posta adresiniz sadece oyunuzu doğrulamak için kullanılır, asla posta adresinizi diğer taraflarla paylaşmayacağız."
 
 #: app/templates/saving-for-review.html:2
 msgid "Thanks!"
-msgstr "Danke!"
+msgstr "Teşekkürler!"
 
 #: app/templates/saving-for-review.html:4
 msgid "Your suggestion is now waiting for moderation."
-msgstr "Dein Vorschlag wartet nun auf Moderation."
+msgstr "Öneriniz şimdi denetlenmeyi bekliyor."
 
 #: app/templates/saving-propose-error.html:2
 msgid "An error occured while saving your suggestion."
-msgstr "Beim Speichern deines Vorschlags ist ein Fehler aufgetreten."
+msgstr "Önerinizi kaydederken bir hata oluştu."
 
 #: app/templates/saving-propose-error.html:4
 #: app/templates/saving-vote-error.html:4
 msgid "Please try again later."
-msgstr "Bitte versuche es später erneut."
+msgstr "Lütfen daha sonra tekrar deneyin."
 
 #: app/templates/saving-vote-error.html:2
 msgid "An error occured while saving your vote."
-msgstr "Beim Speichern deiner Stimme ist ein Fehler aufgetreten."
+msgstr "Oyunuzu kaydederken bir hata oluştu."
 
 #: app/templates/send-confirmation-subject.html:1
 msgid "GeoKrety - Confirm your vote"
-msgstr "GeoKrety - Bestätige deine Wahl"
+msgstr "GeoKrety - Oyunuzu onaylayın"
 
 #: app/templates/send-confirmation-text.html:1
 #, python-format
@@ -219,10 +219,10 @@ msgid "Hi!\n\n"
 "Thanks you for participating in finding our mascot a name.\n\n"
 "You have voted for \"%(name)s\"\n\n"
 "Please click (or copy/paste) this link %(url)s to validate your vote.\n"
-msgstr "Hallo!\n\n"
-"Danke für deine Teilnahme bei der Namensfindung für unser Maskottchen.\n\n"
-"Du hast für \"%(name)s\" gestimmt\n\n"
-"Bitte klicke (oder kopiere) diesen Link %(url)s um deine Wahl zu bestätigen.\n"
+msgstr "Merhaba!\n\n"
+"Maskot adımızı bulmamıza katıldığınız için teşekkür ederiz.\n\n"
+"\"%(name)s\" için oylama yaptınız\n\n"
+"Lütfen oyunuzu doğrulamak için bu bağlantıya %(url)s tıklayın ( veya kopyala/yapıştır yapın).\n"
 
 #: app/templates/send-confirmation.html:5
 #, python-format
@@ -230,39 +230,36 @@ msgid "Hi!<br>\n"
 "        Thanks you for participating in finding our mascot a name.<br>\n"
 "        You have voted for <q>%(name)s</q><br>\n"
 "        Please click to <a href=\"%(url)s\">validate your vote</a>."
-msgstr "Hallo!<br>\n"
-"        Danke für deine Teilnahme bei der Namensfindung für unser Maskottchen.<br>\n"
-"        Du hast für <q>\"%(name)s\"</q> gestimmt<br>\n"
-"        Bitte klicke um <a href=\"%(url)s\">deine Wahl zu bestätigen</a>."
+msgstr "Merbaha!<br>        Maskot adımızı bulmamıza katıldığınız için teşekkür ederiz.<br>        <q>%(name)s</q><br> için oylama yaptınız        Lütfen <a href=\"%(url)s\">oyunuzu doğrulamak için</a> tıklayın."
 
 #: app/templates/single.html:6
 msgid "Please fill all fields"
-msgstr "Bitte alle Felder ausfüllen"
+msgstr "Lütfen tüm alanları doldurun"
 
 #: app/templates/single.html:14
 msgid "Back Home"
-msgstr "Zurück zur Startseite"
+msgstr "Ana sayfaya geri dön"
 
 #: app/templates/validate.html:2
 msgid "Thank you!"
-msgstr "Vielen Dank!"
+msgstr "Teşekkür ederiz!"
 
 #: app/templates/validate.html:4
 msgid "Your vote has been registered."
-msgstr "Deine Stimme wurde registriert."
+msgstr "Oyunuz kaydedildi."
 
 #: app/templates/vote.html:2
 msgid "You're one step close to finish."
-msgstr "Du bist einen Schritt vor dem Abschluss."
+msgstr "Bitirmeye bir adım daha yaklaştınız."
 
 #: app/templates/vote.html:4
 #, python-format
 msgid "You want to call me <q>%(name)s</q>"
-msgstr "Du möchtest mich <q>%(name)s</q> nennen"
+msgstr "Bana <q>%(name)s</q> demek istiyorsun"
 
 #: app/templates/vote.html:6
 msgid "Please enter your email and click the link in the mail you will receive to validate your choice."
-msgstr "Bitte gib deine E-Mail Adresse ein und klicke in der erhaltenen E-Mail den Link um deine Wahl zu bestätigen."
+msgstr "Lütfen e-posta adresinizi girin ve seçiminizi doğrulamak için alacağınız postadaki bağlantıya tıklayın."
 
 #: app/templates/vote.html:8
 msgid "you@provider.net"
@@ -270,5 +267,5 @@ msgstr "you@provider.net"
 
 #: app/templates/vote.html:10
 msgid "Send me the validation link"
-msgstr "Schicke mir den Bestätigungs-Link"
+msgstr "Bana onaylama bağlantısını gönderin"
 

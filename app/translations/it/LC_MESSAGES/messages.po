@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: geokrety\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-11-06 20:31+0000\n"
-"PO-Revision-Date: 2017-11-06 15:33-0500\n"
+"POT-Creation-Date: 2017-11-06 22:50+0000\n"
+"PO-Revision-Date: 2018-03-09 17:57-0500\n"
 "Last-Translator: geokrety <geokrety@gmail.com>\n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Language: it_IT\n"
 
 #: app/templates/already-proposed-error.html:2
-msgid "Thanks for your proposition,"
-msgstr "Grazie per la proposta,"
+msgid "Thanks for your suggestion."
+msgstr ""
 
 #: app/templates/already-proposed-error.html:4
-msgid "But this name was already proposed."
-msgstr "Ma questo nome è già stato proposto."
+msgid "But this name was already suggested."
+msgstr ""
 
 #: app/templates/already-voted.html:2
 msgid "You have already voted"
@@ -44,8 +44,8 @@ msgid "Yes, change my vote"
 msgstr "Sì, cambio il mio voto"
 
 #: app/templates/already-voted.html:20
-msgid "Be careful you didn't validated your vote!"
-msgstr "Attenzione non hai validato il tuo voto!"
+msgid "Be careful you didn't validate your vote!"
+msgstr ""
 
 #: app/templates/already-voted.html:22
 msgid "Send validation link again"
@@ -55,13 +55,21 @@ msgstr "Invia di nuovo il link di convalida"
 msgid "GeoKrety Mascot name"
 msgstr "Il nome della mascotte GeoKrety"
 
+#: app/templates/base.html:46
+msgid "A question?"
+msgstr ""
+
+#: app/templates/base.html:47
+msgid "Contact us"
+msgstr ""
+
 #: app/templates/check-your-mails.html:2
 msgid "Now, check your mails"
 msgstr "Ora, controlla la posta elettronica"
 
 #: app/templates/check-your-mails.html:4
-msgid "and clic the validation link."
-msgstr "e clicca il link di convalida."
+msgid "and click the validation link."
+msgstr ""
 
 #: app/templates/index.html:6
 msgid "Do you know the GeoKrety mascot name?"
@@ -92,11 +100,11 @@ msgid "The vote will take place in three steps."
 msgstr ""
 
 #: app/templates/index.html:32
-msgid "We collect your propositions"
+msgid "We collect your suggestions"
 msgstr ""
 
 #: app/templates/index.html:33
-msgid "Selection by a comitee"
+msgid "A comitee will elect 5 of your suggestions"
 msgstr ""
 
 #: app/templates/index.html:34
@@ -113,16 +121,16 @@ msgid "By %(username)s"
 msgstr ""
 
 #: app/templates/index.html:52 app/templates/index.html:63
-msgid "Want to propose something else?"
-msgstr "Vuoi proporre qualcosa di diverso?"
+msgid "Want to suggest something else?"
+msgstr ""
 
 #: app/templates/index.html:72
 msgid "Other community poll"
 msgstr "Altro sondaggio di comunità"
 
 #: app/templates/index.html:73
-msgid "We are also looking for your help for designing a nice official KretyCoin to celebrate our 10th aniversary."
-msgstr "Ti chiediamo inoltre un aiuto per progettare la moneta che celebrerà il nostro 10° anniversario."
+msgid "We are also looking for your help for designing a nice official KretyCoin to celebrate our 10th anniversary."
+msgstr ""
 
 #: app/templates/index.html:74
 msgid "Let me give my opinion"
@@ -145,36 +153,36 @@ msgid "Don't hesitate to submit your favorite and cute name."
 msgstr "Non esitare a inviare il tuo nome preferito."
 
 #: app/templates/propose-name.html:7
-msgid "Name must not be offensive"
-msgstr "Non inviare ingiurie"
+msgid "The name must not be offensive"
+msgstr ""
 
-#: app/templates/propose-name.html:8
-msgid "Name must contains letters <q>G</q> and <q>K</q> in that order"
-msgstr "Il nome deve contenere le lettere <q>G</q> e<q>K</q> nell'ordine"
+#: app/templates/propose-name.html:8 app/templates/single.html:8
+msgid "The name must contains letters <q>G</q> and <q>K</q> in that order"
+msgstr ""
 
 #: app/templates/propose-name.html:14
-msgid "I propose as the mascot name"
-msgstr "Propongo come nome della mascotte"
+msgid "I suggest as the mascot name:"
+msgstr ""
 
 #: app/templates/propose-name.html:15
 msgid "Some name"
 msgstr "Qualche nome"
 
 #: app/templates/propose-name.html:18
-msgid "Your username"
-msgstr "Il tuo nome utente"
+msgid "Your username:"
+msgstr ""
 
 #: app/templates/propose-name.html:19
 msgid "Username"
 msgstr "Nome utente"
 
 #: app/templates/propose-name.html:22
-msgid "Your email"
-msgstr "Il tuo indirizzo di posta elettronica"
+msgid "Your email:"
+msgstr ""
 
 #: app/templates/propose-name.html:27
-msgid "Propose"
-msgstr "Proponi"
+msgid "Suggest"
+msgstr ""
 
 #: app/templates/propose-name.html:29 app/templates/vote.html:12
 msgid "Your mail address will only be used to validate your vote, we will never share it with other parties."
@@ -185,12 +193,12 @@ msgid "Thanks!"
 msgstr "Grazie!"
 
 #: app/templates/saving-for-review.html:4
-msgid "Your proposition is now waiting for moderation."
-msgstr "La proposta è ora in attesa di valutazione."
+msgid "Your suggestion is now waiting for moderation."
+msgstr ""
 
 #: app/templates/saving-propose-error.html:2
-msgid "An error occured while saving your proposition."
-msgstr "Errore durante il salvataggio della tua iscrizione."
+msgid "An error occured while saving your suggestion."
+msgstr ""
 
 #: app/templates/saving-propose-error.html:4
 #: app/templates/saving-vote-error.html:4
@@ -224,7 +232,11 @@ msgid "Hi!<br>\n"
 "        Please click to <a href=\"%(url)s\">validate your vote</a>."
 msgstr "Ciao! <br>Ti ringraziamo per aiutarci a trovare alla nostra mascotte un nome. <br>Hai votato per <q>%(name)s</q> <br>per favore clicca per <a href=\"%(url)s\"> per validare il tuo voto</a>."
 
-#: app/templates/single.html:9
+#: app/templates/single.html:6
+msgid "Please fill all fields"
+msgstr ""
+
+#: app/templates/single.html:14
 msgid "Back Home"
 msgstr "Torna alla home page"
 
