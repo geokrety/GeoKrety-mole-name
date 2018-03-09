@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  geokrety-mole-name:
+    build: .
+    image: geokrety-mole-name:1.0.0
+    ports:
+     - 8000:8000
+    volumes:
+      - .:/opt/flask
+      - ./database:/opt/flask/database
+      - ./config:/opt/flask/config
