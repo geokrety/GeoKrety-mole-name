@@ -4,18 +4,23 @@ services:
   geokrety-mole-name:
     build: .
     image: geokrety-mole-name:1.0.0
+    command: gunicorn -w 4 -b 0.0.0.0:8000 --access-logfile - --error-logfile - --reload app.main:app
     # ports:
     #  - 8000:8000
     volumes:
     #   - .:/opt/flask
-      - ./database:/opt/flask/database
-      - ./config:/opt/flask/config
+      - ./:/opt/flask/:ro
+      - ./database:/opt/flask/database:rw
+      - ./config:/opt/flask/config:rw
     labels:
       - "traefik.enable=true"
-      - "traefik.frontend.rule=Host:molename.geokrety.org,molename.gk.kumy.org"
       - "traefik.docker.network=srv_geokrety-front"
+      - "traefik.frontend.passHostHeader=true"
+      - "traefik.frontend.rule=Host:polls.geokrety.org;PathPrefix:/molename"
+      - "traefik.port=8000"
     networks:
       - front
+
 
 networks:
   front:
