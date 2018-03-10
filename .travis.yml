@@ -27,4 +27,4 @@ script:
 - echo "PLEASE TRAVIS! PLEASE!"
 - if [ "$DIFF" != "1	1	app/translations/messages.pot" ]; then git add app/; git commit -m " travis-ci auto-update of translations [ci skip]"; fi;
 after_success:
-  - 'if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then echo "Pushing to github"; git push gh-token; fi'
+  - 'if [ "${TRAVIS_PULL_REQUEST}" = "master" ]; then echo "Pushing to github"; git push gh-token; fi'
