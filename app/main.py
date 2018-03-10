@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import hashlib
 import os
 import sqlite3
@@ -18,12 +19,15 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.config['BABEL_DEFAULT_LOCALE'] = 'en'
 app.config['BABEL_DEFAULT_TIMEZONE'] = 'UTC'
 app.config['SUPPORTED_LANGUAGES'] = {
-    'en': 'English',
-    'pl': 'Polskie',
-    'fr': 'Francais',
-    'no': 'Norsk',
-    'it': 'Italiano',
-    'de': 'Deutsch',
+    'en': u'English',
+    'pl': u'Polskie',
+    'fr': u'Francais',
+    'no': u'Norsk',
+    'it': u'Italiano',
+    'de': u'Deutsch',
+    'es': u'Español',
+    'id': u'Indonesian',
+    'sq': u'shqiptar',
 }
 
 babel = Babel(app)

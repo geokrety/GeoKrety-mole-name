@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: geokrety\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-11-06 20:31+0000\n"
-"PO-Revision-Date: 2017-11-06 15:33-0500\n"
+"POT-Creation-Date: 2017-11-06 22:50+0000\n"
+"PO-Revision-Date: 2018-03-09 17:57-0500\n"
 "Last-Translator: geokrety <geokrety@gmail.com>\n"
 "Language-Team: Norwegian\n"
 "MIME-Version: 1.0\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Language: no_NO\n"
 
 #: app/templates/already-proposed-error.html:2
-msgid "Thanks for your proposition,"
-msgstr "Tusen takk for forslaget ditt,"
+msgid "Thanks for your suggestion."
+msgstr "Tusen takk for forslaget ditt."
 
 #: app/templates/already-proposed-error.html:4
-msgid "But this name was already proposed."
-msgstr "men dette navnet har allerede blitt foreslått."
+msgid "But this name was already suggested."
+msgstr "Men dette navnet har allerede blitt foreslått."
 
 #: app/templates/already-voted.html:2
 msgid "You have already voted"
@@ -32,7 +32,7 @@ msgstr "Du har allerede stemt"
 #: app/templates/already-voted.html:5
 #, python-format
 msgid "for <q>%(name)s</q> on %(vote_datetime)s"
-msgstr "på <q>%(name)s</q> i %(vote_datetime)s."
+msgstr "på <q>%(name)s</q> i %(vote_datetime)s"
 
 #: app/templates/already-voted.html:10
 #, python-format
@@ -44,28 +44,36 @@ msgid "Yes, change my vote"
 msgstr "Ja, endr stemmen min"
 
 #: app/templates/already-voted.html:20
-msgid "Be careful you didn't validated your vote!"
+msgid "Be careful you didn't validate your vote!"
 msgstr "Vær forsiktig, du bekreftet ikke stemmen din!"
 
 #: app/templates/already-voted.html:22
 msgid "Send validation link again"
-msgstr "Send bekreftelseslenke på nytt"
+msgstr "Send bekreftelseslenken på nytt"
 
 #: app/templates/base.html:9
 msgid "GeoKrety Mascot name"
-msgstr "GeoKrety sitt maskotnavn"
+msgstr "Navn til GeoKrety sin maskot"
+
+#: app/templates/base.html:46
+msgid "A question?"
+msgstr "Et spørsmål?"
+
+#: app/templates/base.html:47
+msgid "Contact us"
+msgstr "Kontakt oss"
 
 #: app/templates/check-your-mails.html:2
 msgid "Now, check your mails"
 msgstr "Nå, sjekk e-posten din"
 
 #: app/templates/check-your-mails.html:4
-msgid "and clic the validation link."
+msgid "and click the validation link."
 msgstr "og klikk på bekreftelseslenken."
 
 #: app/templates/index.html:6
 msgid "Do you know the GeoKrety mascot name?"
-msgstr "Vet du hva GeoKrety sitt maskotnavn er?"
+msgstr "Vet du hva navnet til GeoKrety sin maskot er?"
 
 #: app/templates/index.html:7
 msgid "No? Normal, It doesn't have one yet!"
@@ -85,23 +93,23 @@ msgstr "Jeg vil stemme!"
 
 #: app/templates/index.html:28
 msgid "Take part to the poll."
-msgstr ""
+msgstr "Delta i avstemningen."
 
 #: app/templates/index.html:30
 msgid "The vote will take place in three steps."
-msgstr ""
+msgstr "Avstemningen vil bestå av tre steg."
 
 #: app/templates/index.html:32
-msgid "We collect your propositions"
-msgstr ""
+msgid "We collect your suggestions"
+msgstr "Vi samler forslagene dine"
 
 #: app/templates/index.html:33
-msgid "Selection by a comitee"
-msgstr ""
+msgid "A comitee will elect 5 of your suggestions"
+msgstr "En komité vil velge 5 av forslagene dine"
 
 #: app/templates/index.html:34
 msgid "You vote for your prefered name"
-msgstr ""
+msgstr "Du stemmer på det navnet du liker best"
 
 #: app/templates/index.html:43
 msgid "Vote"
@@ -110,10 +118,10 @@ msgstr "Stem"
 #: app/templates/index.html:45
 #, python-format
 msgid "By %(username)s"
-msgstr ""
+msgstr "Av %(username)s"
 
 #: app/templates/index.html:52 app/templates/index.html:63
-msgid "Want to propose something else?"
+msgid "Want to suggest something else?"
 msgstr "Vil du foreslå noe annet?"
 
 #: app/templates/index.html:72
@@ -121,7 +129,7 @@ msgid "Other community poll"
 msgstr "Andre fellesskapsavstemninger"
 
 #: app/templates/index.html:73
-msgid "We are also looking for your help for designing a nice official KretyCoin to celebrate our 10th aniversary."
+msgid "We are also looking for your help for designing a nice official KretyCoin to celebrate our 10th anniversary."
 msgstr "Vi ser også etter hjelp til å designe en fin offisiell KretyCoin for å feire det 10. jubileet vårt."
 
 #: app/templates/index.html:74
@@ -145,52 +153,52 @@ msgid "Don't hesitate to submit your favorite and cute name."
 msgstr "Ikke nøl med å foreslå et søtt navn du liker."
 
 #: app/templates/propose-name.html:7
-msgid "Name must not be offensive"
+msgid "The name must not be offensive"
 msgstr "Navnet kan ikke være støtende"
 
-#: app/templates/propose-name.html:8
-msgid "Name must contains letters <q>G</q> and <q>K</q> in that order"
+#: app/templates/propose-name.html:8 app/templates/single.html:8
+msgid "The name must contains letters <q>G</q> and <q>K</q> in that order"
 msgstr "Navnet må inneholde bokstavene <q>G</q> og <q>K</q> i den rekkefølgen"
 
 #: app/templates/propose-name.html:14
-msgid "I propose as the mascot name"
-msgstr ""
+msgid "I suggest as the mascot name:"
+msgstr "Jeg foreslår som maskotnavn:"
 
 #: app/templates/propose-name.html:15
 msgid "Some name"
 msgstr "Et eller annet navn"
 
 #: app/templates/propose-name.html:18
-msgid "Your username"
-msgstr "Brukernavnet ditt"
+msgid "Your username:"
+msgstr "Brukernavnet ditt:"
 
 #: app/templates/propose-name.html:19
 msgid "Username"
 msgstr "Brukernavn"
 
 #: app/templates/propose-name.html:22
-msgid "Your email"
-msgstr "E-posten din"
+msgid "Your email:"
+msgstr "E-posten din:"
 
 #: app/templates/propose-name.html:27
-msgid "Propose"
+msgid "Suggest"
 msgstr "Foreslå"
 
 #: app/templates/propose-name.html:29 app/templates/vote.html:12
 msgid "Your mail address will only be used to validate your vote, we will never share it with other parties."
-msgstr ""
+msgstr "E-postadressen din vil kun brukes til å bekrefte stemmen din, vi vil aldri dele den med andre parter."
 
 #: app/templates/saving-for-review.html:2
 msgid "Thanks!"
 msgstr "Tusen takk!"
 
 #: app/templates/saving-for-review.html:4
-msgid "Your proposition is now waiting for moderation."
+msgid "Your suggestion is now waiting for moderation."
 msgstr "Forslaget ditt venter nå på moderering."
 
 #: app/templates/saving-propose-error.html:2
-msgid "An error occured while saving your proposition."
-msgstr "Det oppsto en feil under lagringen av forslaget ditt."
+msgid "An error occured while saving your suggestion."
+msgstr "En feil oppsto under lagringen av forslaget ditt."
 
 #: app/templates/saving-propose-error.html:4
 #: app/templates/saving-vote-error.html:4
@@ -227,7 +235,11 @@ msgstr "Hei!<br>\n"
 "        Du har stemt på <q>\"%(name)s\".</q><br>\n"
 "        Vennligst klikk her for å <a href=\"%(url)s\">bekrefte stemmen din</a>."
 
-#: app/templates/single.html:9
+#: app/templates/single.html:6
+msgid "Please fill all fields"
+msgstr "Vennligst fyll inn alle feltene"
+
+#: app/templates/single.html:14
 msgid "Back Home"
 msgstr "Hjem"
 
@@ -254,7 +266,7 @@ msgstr "Vennligst angi e-posten din og klikk på lenken du vil motta for å bekr
 
 #: app/templates/vote.html:8
 msgid "you@provider.net"
-msgstr ""
+msgstr "you@provider.net"
 
 #: app/templates/vote.html:10
 msgid "Send me the validation link"

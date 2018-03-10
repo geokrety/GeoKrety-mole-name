@@ -1,0 +1,30 @@
+env:
+  global:
+  - GIT_EMAIL: kumy@geokretymap.org
+  - GH_REF: git@github.com:geokrety/GeoKrety-mole-name.git
+language: python
+python:
+  - "2.7"
+install: "pip install -r requirements.txt"
+before_script:
+- pip install Babel
+script:
+- git config user.name "travis-ci - Automatic Publish"
+- git config user.email "${GIT_EMAIL}"
+- openssl aes-256-cbc -K $encrypted_c5618515_key -iv $encrypted_c5618515_iv -in deploy-key.enc -out deploy-key -d
+- chmod 600 deploy-key
+- eval `ssh-agent -s`
+- ssh-add deploy-key
+- git remote add gh-token "${GH_REF}";
+- git fetch gh-token
+- git checkout master
+- git pull
+- git config --global push.default simple
+- pybabel extract -o app/translations/messages.pot ./app/templates/
+- for dirr in ./app/translations/* ; do msgfmt ${dirr}/LC_MESSAGES/messages.po -o ${dirr}/LC_MESSAGES/messages.mo ; echo ${dirr} compiled; done
+- DIFF=$(git diff --numstat)
+- echo "$DIFF"
+- echo "PLEASE TRAVIS! PLEASE!"
+- if [ "$DIFF" != "1	1	app/translations/messages.pot" ]; then git add app/; git commit -m " travis-ci auto-update of translations [ci skip]"; fi;
+after_success:
+  - 'if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then echo "Pushing to github"; git push gh-token; fi'

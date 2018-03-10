@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  geokrety-mole-name:
+    build: .
+    image: geokrety-mole-name:1.0.0
+    command: gunicorn -w 4 -b 0.0.0.0:8010 --access-logfile - --error-logfile - --reload app.main:app
+    ports:
+     - 8010:8010
+    volumes:
+      - .:/opt/flask
+      - ./database:/opt/flask/database
+      - ./config:/opt/flask/config
