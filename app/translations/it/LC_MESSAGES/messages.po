@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: geokrety\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2017-11-06 22:50+0000\n"
-"PO-Revision-Date: 2018-03-09 17:57-0500\n"
+"PO-Revision-Date: 2018-09-23 17:49\n"
 "Last-Translator: geokrety <geokrety@gmail.com>\n"
 "Language-Team: Italian\n"
 "MIME-Version: 1.0\n"
@@ -19,11 +19,11 @@ msgstr ""
 
 #: app/templates/already-proposed-error.html:2
 msgid "Thanks for your suggestion."
-msgstr ""
+msgstr "Grazie per il suggerimento."
 
 #: app/templates/already-proposed-error.html:4
 msgid "But this name was already suggested."
-msgstr ""
+msgstr "Ma questo nome è già stato proposto."
 
 #: app/templates/already-voted.html:2
 msgid "You have already voted"
@@ -45,7 +45,7 @@ msgstr "Sì, cambio il mio voto"
 
 #: app/templates/already-voted.html:20
 msgid "Be careful you didn't validate your vote!"
-msgstr ""
+msgstr "Attenzione non hai validato il tuo voto!"
 
 #: app/templates/already-voted.html:22
 msgid "Send validation link again"
@@ -57,11 +57,11 @@ msgstr "Il nome della mascotte GeoKrety"
 
 #: app/templates/base.html:46
 msgid "A question?"
-msgstr ""
+msgstr "Una domanda?"
 
 #: app/templates/base.html:47
 msgid "Contact us"
-msgstr ""
+msgstr "Contattaci"
 
 #: app/templates/check-your-mails.html:2
 msgid "Now, check your mails"
@@ -69,7 +69,7 @@ msgstr "Ora, controlla la posta elettronica"
 
 #: app/templates/check-your-mails.html:4
 msgid "and click the validation link."
-msgstr ""
+msgstr "e clicca il link di convalida."
 
 #: app/templates/index.html:6
 msgid "Do you know the GeoKrety mascot name?"
@@ -93,23 +93,23 @@ msgstr "Voglio votare!"
 
 #: app/templates/index.html:28
 msgid "Take part to the poll."
-msgstr ""
+msgstr "Prendi parte al sondaggio."
 
 #: app/templates/index.html:30
 msgid "The vote will take place in three steps."
-msgstr ""
+msgstr "La votazione si svolgerà in tre fasi."
 
 #: app/templates/index.html:32
 msgid "We collect your suggestions"
-msgstr ""
+msgstr "Raccogliamo i vostri suggerimenti"
 
 #: app/templates/index.html:33
 msgid "A comitee will elect 5 of your suggestions"
-msgstr ""
+msgstr "Un comitato eleggerà 5 dei vostri suggerimenti"
 
 #: app/templates/index.html:34
 msgid "You vote for your prefered name"
-msgstr ""
+msgstr "Votate per il vostro nome preferito"
 
 #: app/templates/index.html:43
 msgid "Vote"
@@ -118,11 +118,11 @@ msgstr "Vota"
 #: app/templates/index.html:45
 #, python-format
 msgid "By %(username)s"
-msgstr ""
+msgstr "Da %(username)s"
 
 #: app/templates/index.html:52 app/templates/index.html:63
 msgid "Want to suggest something else?"
-msgstr ""
+msgstr "Vuoi proporre qualcosa di diverso?"
 
 #: app/templates/index.html:72
 msgid "Other community poll"

@@ -28,6 +28,7 @@ app.config['SUPPORTED_LANGUAGES'] = {
     'es': u'Español',
     'id': u'Indonesian',
     'sq': u'shqiptar',
+    'sc': u'Čeština',
 }
 
 babel = Babel(app)

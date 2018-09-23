@@ -3,9 +3,9 @@ msgstr ""
 "Project-Id-Version: geokrety\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2017-11-06 22:50+0000\n"
-"PO-Revision-Date: 2018-06-07 17:19-0400\n"
+"PO-Revision-Date: 2018-09-23 17:48\n"
 "Last-Translator: geokrety <geokrety@gmail.com>\n"
-"Language-Team: Albanian\n"
+"Language-Team: Dutch\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,207 +13,205 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: geokrety\n"
-"X-Crowdin-Language: sq\n"
+"X-Crowdin-Language: nl\n"
 "X-Crowdin-File: the_mole_with_no_name.pot\n"
-"Language: sq_AL\n"
+"Language: nl_NL\n"
 
 #: app/templates/already-proposed-error.html:2
 msgid "Thanks for your suggestion."
-msgstr ""
+msgstr "Bedankt voor de suggestie."
 
 #: app/templates/already-proposed-error.html:4
 msgid "But this name was already suggested."
-msgstr "Por ky emër tashmë ishte sugjeruar."
+msgstr "Helaas is deze naam al voorgesteld."
 
 #: app/templates/already-voted.html:2
 msgid "You have already voted"
-msgstr ""
+msgstr "Je hebt al gestemd"
 
 #: app/templates/already-voted.html:5
 #, python-format
 msgid "for <q>%(name)s</q> on %(vote_datetime)s"
-msgstr ""
+msgstr "voor <q>%(name)s</q> op %(vote_datetime)s"
 
 #: app/templates/already-voted.html:10
 #, python-format
 msgid "Do you want to change your vote for <q>%(new_name)s"
-msgstr ""
+msgstr "Moet je stem voor <q>%(new_name)s veranderen?"
 
 #: app/templates/already-voted.html:16
 msgid "Yes, change my vote"
-msgstr ""
+msgstr "Ja, verander mijn stem"
 
 #: app/templates/already-voted.html:20
 msgid "Be careful you didn't validate your vote!"
-msgstr "Kini kujdes se nuk e keni vërtetuar votën tuaj!"
+msgstr "Let op, Je hebt je stem nog niet bevestigd!"
 
 #: app/templates/already-voted.html:22
 msgid "Send validation link again"
-msgstr "Dërgo lidhjen e validimit përsëri"
+msgstr "Bevestiging link opnieuw opvragen"
 
 #: app/templates/base.html:9
 msgid "GeoKrety Mascot name"
-msgstr "Emri GeoKrety Mascot"
+msgstr "GeoKrety Mascotte naam"
 
 #: app/templates/base.html:46
 msgid "A question?"
-msgstr "Një pyetje?"
+msgstr "Vragen?"
 
 #: app/templates/base.html:47
 msgid "Contact us"
-msgstr ""
+msgstr "Contacteer ons"
 
 #: app/templates/check-your-mails.html:2
 msgid "Now, check your mails"
-msgstr "Tani, kontrolloni mesazhet tuaja"
+msgstr "Controleer nu je e-mails"
 
 #: app/templates/check-your-mails.html:4
 msgid "and click the validation link."
-msgstr "dhe klikoni lidhjen e validimit."
+msgstr "en klik op de bevestiging link."
 
 #: app/templates/index.html:6
 msgid "Do you know the GeoKrety mascot name?"
-msgstr "A e njihni emrin e nuskut GeoKrety?"
+msgstr "Weet jij de naam van de GeoKrety mascotte?"
 
 #: app/templates/index.html:7
 msgid "No? Normal, It doesn't have one yet!"
-msgstr "Nuk ka? Normal, nuk ka akoma një!"
+msgstr "Nee? logisch, het heeft nog geen naam!"
 
 #: app/templates/index.html:19
 msgid "We need your opinion to choose one!"
-msgstr "Ne kemi nevojë për mendimin tuaj për të zgjedhur një!"
+msgstr "We hebben uw mening nodig om er een te kiezen!"
 
 #: app/templates/index.html:20
 msgid "GeoKrety is nothing without you, and as a community we hear your voice. Make GeoKrety yours and vote for your favorite name!"
-msgstr "GeoKrety nuk është asgjë pa ty, dhe si një komunitet dëgjojmë zërin tënd. Bëni GeoKrety tuaj dhe votoni për emrin tuaj të preferuar!"
+msgstr "GeoKrety is niets zonder jou en als een gemeenschap horen wij graag je mening. Maak GeoKrety persoonlijk door het stemmen met jouw favoriete naam!"
 
 #: app/templates/index.html:21
 msgid "I want to vote!"
-msgstr "Unë dua të votoj!"
+msgstr "Ik wil stemmen!"
 
 #: app/templates/index.html:28
 msgid "Take part to the poll."
-msgstr "Merrni pjesë në sondazh."
+msgstr "Neem deel aan de poll."
 
 #: app/templates/index.html:30
 msgid "The vote will take place in three steps."
-msgstr "Votimi do të zhvillohet në tre hapa."
+msgstr "De poll bestaat uit 3 stappen."
 
 #: app/templates/index.html:32
 msgid "We collect your suggestions"
-msgstr "Ne mbledhim sugjerimet tuaja"
+msgstr "Wij verzamelen jullie suggesties"
 
 #: app/templates/index.html:33
 msgid "A comitee will elect 5 of your suggestions"
-msgstr "Një komision do të zgjedhë 5 nga sugjerimet tuaja"
+msgstr "Een comité zal 5 van jullie suggesties uitkiezen"
 
 #: app/templates/index.html:34
 msgid "You vote for your prefered name"
-msgstr "Ju votoni për emrin tuaj të preferuar"
+msgstr "Jij stemt voor jouw naam van voorkeur"
 
 #: app/templates/index.html:43
 msgid "Vote"
-msgstr ""
+msgstr "Stemmen"
 
 #: app/templates/index.html:45
 #, python-format
 msgid "By %(username)s"
-msgstr ""
+msgstr "Door %(username)s"
 
 #: app/templates/index.html:52 app/templates/index.html:63
 msgid "Want to suggest something else?"
-msgstr "Dëshironi të sugjeroni diçka tjetër?"
+msgstr "Wil je een andere suggestie doen?"
 
 #: app/templates/index.html:72
 msgid "Other community poll"
-msgstr "Anketa të tjera të komunitetit"
+msgstr "Andere community rondvraag"
 
 #: app/templates/index.html:73
 msgid "We are also looking for your help for designing a nice official KretyCoin to celebrate our 10th anniversary."
-msgstr "Ne po kërkojmë gjithashtu ndihmën tuaj për hartimin e një zyrtari të bukur KretyCoin për të festuar përvjetorin tonë të 10-të."
+msgstr "Wij kunnen je hulp gebruiken om een mooie officiële KretyCoin te ontwerpen om onze 10e verjaardag te vieren."
 
 #: app/templates/index.html:74
 msgid "Let me give my opinion"
-msgstr "Më lejoni të jap mendimin tim"
+msgstr "Ik wil graag mijn mening geven"
 
 #: app/templates/no-such-token.html:2
 msgid "An error occured while saving you vote."
-msgstr "Ndodhi një gabim gjatë ruajtjes së votës."
+msgstr "Er is een fout opgetreden tijdens het opslaan van jouw stem."
 
 #: app/templates/no-such-token.html:4
 msgid "Invalid token."
-msgstr "Notë e pavlefshme."
+msgstr "Ongeldige token."
 
 #: app/templates/propose-name.html:2
 msgid "You have another idea?"
-msgstr "Ke ndonjë ide tjetër?"
+msgstr "Heb je een ander idee?"
 
 #: app/templates/propose-name.html:4
 msgid "Don't hesitate to submit your favorite and cute name."
-msgstr "Mos hezitoni të dërgoni emrin tuaj të preferuar dhe të bukur."
+msgstr "Aarzel niet om een favoriete en leuke naam in te sturen."
 
 #: app/templates/propose-name.html:7
 msgid "The name must not be offensive"
-msgstr "Emri nuk duhet të jetë ofendues"
+msgstr "De naam mag niet aanstootgevend zijn"
 
 #: app/templates/propose-name.html:8 app/templates/single.html:8
 msgid "The name must contains letters <q>G</q> and <q>K</q> in that order"
-msgstr ""
+msgstr "De naam moet wel de letters <q>G</q> en <q>K</q> in deze volgorde bevatten"
 
 #: app/templates/propose-name.html:14
 msgid "I suggest as the mascot name:"
-msgstr "Unë sugjeroj si emrin maskot:"
+msgstr "Mijn suggestie als mascotte naam is:"
 
 #: app/templates/propose-name.html:15
 msgid "Some name"
-msgstr "Disa emra"
+msgstr "Een naam"
 
 #: app/templates/propose-name.html:18
 msgid "Your username:"
-msgstr "Emri i përdoruesit:"
+msgstr "Jouw gebruikersnaam:"
 
 #: app/templates/propose-name.html:19
 msgid "Username"
-msgstr "Emri i përdoruesit"
+msgstr "Gebruikersnaam"
 
 #: app/templates/propose-name.html:22
 msgid "Your email:"
-msgstr "Emaili yt:"
+msgstr "Jouw e-mailadres:"
 
 #: app/templates/propose-name.html:27
 msgid "Suggest"
-msgstr ""
+msgstr "Voorstellen"
 
 #: app/templates/propose-name.html:29 app/templates/vote.html:12
 msgid "Your mail address will only be used to validate your vote, we will never share it with other parties."
-msgstr "Adresa juaj e postës do të përdoret vetëm për të vërtetuar votën tuaj, ne kurrë nuk do ta ndajmë atë me palët e tjera.\n"
-" \n"
-"Konteksti | Konteksti i Kërkesës"
+msgstr "Jouw e-mailadres worden uitsluitend gebruikt voor het valideren van jouw stemming, we zullen het nooit delen met andere partijen."
 
 #: app/templates/saving-for-review.html:2
 msgid "Thanks!"
-msgstr ""
+msgstr "Bedankt!"
 
 #: app/templates/saving-for-review.html:4
 msgid "Your suggestion is now waiting for moderation."
-msgstr "Sugjerimi juaj tani është duke pritur për moderim."
+msgstr "Jouw suggestie wacht nu op goedkeuring."
 
 #: app/templates/saving-propose-error.html:2
 msgid "An error occured while saving your suggestion."
-msgstr "Ndodhi një gabim gjatë ruajtjes së sugjerimit tënd."
+msgstr "Er is een fout opgetreden tijdens het opslaan van jouw suggestie."
 
 #: app/templates/saving-propose-error.html:4
 #: app/templates/saving-vote-error.html:4
 msgid "Please try again later."
-msgstr ""
+msgstr "Probeer het later nog eens."
 
 #: app/templates/saving-vote-error.html:2
 msgid "An error occured while saving your vote."
-msgstr ""
+msgstr "Er is een fout opgetreden tijdens het opslaan van jouw stem."
 
 #: app/templates/send-confirmation-subject.html:1
 msgid "GeoKrety - Confirm your vote"
-msgstr "GeoKrety - Konfirmoni votën tuaj"
+msgstr "GeoKrety - bevestig jouw stem"
 
 #: app/templates/send-confirmation-text.html:1
 #, python-format
@@ -221,7 +219,10 @@ msgid "Hi!\n\n"
 "Thanks you for participating in finding our mascot a name.\n\n"
 "You have voted for \"%(name)s\"\n\n"
 "Please click (or copy/paste) this link %(url)s to validate your vote.\n"
-msgstr ""
+msgstr "Hallo!\n\n"
+"Bedankt voor je deelname om een naam voor onze mascotte te vinden.\n\n"
+"Je hebt voor \"%(name)s\" gestemd\n\n"
+"Klik (of kopieer) deze link %(url)s om je stem te bevestigen.\n"
 
 #: app/templates/send-confirmation.html:5
 #, python-format
@@ -229,36 +230,39 @@ msgid "Hi!<br>\n"
 "        Thanks you for participating in finding our mascot a name.<br>\n"
 "        You have voted for <q>%(name)s</q><br>\n"
 "        Please click to <a href=\"%(url)s\">validate your vote</a>."
-msgstr ""
+msgstr "Hallo!<br>\n"
+"         Bedankt voor je deelname om een naam voor onze mascotte te vinden.<br>\n"
+"         Je hebt gestemd op<q>%(name)s</q><br>\n"
+"         Klik op <a href=\"%(url)s\">om je stem te bevestigen</a>."
 
 #: app/templates/single.html:6
 msgid "Please fill all fields"
-msgstr ""
+msgstr "Vul alle velden in"
 
 #: app/templates/single.html:14
 msgid "Back Home"
-msgstr ""
+msgstr "Terug naar begin"
 
 #: app/templates/validate.html:2
 msgid "Thank you!"
-msgstr ""
+msgstr "Hartelijk dank!"
 
 #: app/templates/validate.html:4
 msgid "Your vote has been registered."
-msgstr ""
+msgstr "Jouw stem is geregistreerd."
 
 #: app/templates/vote.html:2
 msgid "You're one step close to finish."
-msgstr "Ju jeni një hap i afërt për të përfunduar."
+msgstr "Je bent toegekomen aan de laatste stap."
 
 #: app/templates/vote.html:4
 #, python-format
 msgid "You want to call me <q>%(name)s</q>"
-msgstr ""
+msgstr "Je kunt mij <q>%(name)s</q> noemen"
 
 #: app/templates/vote.html:6
 msgid "Please enter your email and click the link in the mail you will receive to validate your choice."
-msgstr ""
+msgstr "Voer je e-mailadres in en klik op de link in de mail die je ontvangt voor het valideren van je keuze."
 
 #: app/templates/vote.html:8
 msgid "you@provider.net"
@@ -266,5 +270,5 @@ msgstr "you@provider.net"
 
 #: app/templates/vote.html:10
 msgid "Send me the validation link"
-msgstr ""
+msgstr "Stuur me een bevestigingslink"
 
