@@ -19,16 +19,18 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.config['BABEL_DEFAULT_LOCALE'] = 'en'
 app.config['BABEL_DEFAULT_TIMEZONE'] = 'UTC'
 app.config['SUPPORTED_LANGUAGES'] = {
-    'en': u'English',
-    'pl': u'Polskie',
-    'fr': u'Francais',
-    'no': u'Norsk',
-    'it': u'Italiano',
+    'cs': u'Čeština',
     'de': u'Deutsch',
+    'en': u'English',
     'es': u'Español',
+    'fr': u'Francais',
     'id': u'Indonesian',
-    'sq': u'shqiptar',
-    'sc': u'Čeština',
+    'it': u'Italiano',
+    'no': u'Norsk',
+    'pl': u'Polskie',
+    'sq': u'Shqiptar',
+    'sv': u'Svenska',
+    'tr': u'Türk',
 }
 
 babel = Babel(app)
