@@ -86,7 +86,7 @@ def ensure_lang_support():
 def get_db():
     db = getattr(g, '_database', None)
     if db is None:
-        db = g._database = sqlite3.connect(DATABASE)
+        db = g._database = sqlite3.connect(DATABASE, detect_types=sqlite3.PARSE_DECLTYPES|sqlite3.PARSE_COLNAMES)
     db.row_factory = sqlite3.Row
     return db
 
@@ -217,7 +217,7 @@ def vote(name):
         change_vote = 'change_vote' in request.form
         # Already voted?
         with app.app_context():
-            vote = query_db('SELECT * FROM votes WHERE email = ?', [email], one=True)
+            vote = query_db('SELECT name, email, vote_datetime as "vote_datetime [timestamp]", validate_datetime FROM votes WHERE email = ?', [email], one=True)
         if vote and not change_vote:
             return render_template('already-voted.html', new_name=name, name=vote['name'], email=vote['email'], vote_datetime=vote['vote_datetime'], validate_datetime=vote['validate_datetime'])
 
@@ -245,7 +245,7 @@ def validate(token):
         return redirect(url_for('index'))
 
     with app.app_context():
-        vote = query_db('SELECT * FROM votes WHERE token = ?', [token], one=True)
+        vote = query_db('SELECT name, email, vote_datetime as "vote_datetime [timestamp]", validate_datetime, new_name FROM votes WHERE token = ?', [token], one=True)
     if vote:
         if vote['new_name'] is None and vote['validate_datetime'] is not None:
             return render_template('already-voted.html', name=vote['name'], email=vote['email'], vote_datetime=vote['vote_datetime'], validate_datetime=vote['validate_datetime'])
@@ -316,7 +316,7 @@ def mail_again(email):
         return redirect(url_for('index'))
 
     with app.app_context():
-        vote = query_db('SELECT * FROM votes WHERE email = ?', [email], one=True)
+        vote = query_db('SELECT name, email, vote_datetime as "vote_datetime [timestamp]", validate_datetime, token FROM votes WHERE email = ?', [email], one=True)
     if vote and vote['validate_datetime']:
         return render_template('already-voted.html', name=vote['name'], email=vote['email'], vote_datetime=vote['vote_datetime'], validate_datetime=vote['validate_datetime'])
     if vote:

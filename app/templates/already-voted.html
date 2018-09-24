@@ -2,7 +2,7 @@
 {% block s_heading %}{{_('You have already voted')}}{% endblock %}
 {% block s_content %}
     <h3 class="section-description">
-      {{_('for <q>%(name)s</q> on %(vote_datetime)s', name=name, vote_datetime=vote_datetime)}}.
+      {{_('for <q>%(name)s</q> on %(vote_date)s at %(vote_time)s', name=name, vote_date=vote_datetime.strftime('%Y-%m-%d'), vote_time=vote_datetime.strftime('%H:%M'))}}.
     </h3>
 
     {% if new_name and name != new_name %}
