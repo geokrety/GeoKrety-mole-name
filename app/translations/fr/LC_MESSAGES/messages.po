@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: geokrety\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-11-06 22:50+0000\n"
-"PO-Revision-Date: 2018-09-23 17:49\n"
+"POT-Creation-Date: 2018-09-24 17:09+0000\n"
+"PO-Revision-Date: 2018-09-24 17:14\n"
 "Last-Translator: geokrety <geokrety@gmail.com>\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
+"Generated-By: Babel 2.5.3\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: geokrety\n"
@@ -31,8 +31,8 @@ msgstr "Vous avez déjà voté"
 
 #: app/templates/already-voted.html:5
 #, python-format
-msgid "for <q>%(name)s</q> on %(vote_datetime)s"
-msgstr "pour <q>%(name)s</q> le %(vote_datetime)s"
+msgid "for <q>%(name)s</q> on %(vote_date)s at %(vote_time)s"
+msgstr "pour <q>%(name)s</q> le %(vote_date)s à %(vote_time)s"
 
 #: app/templates/already-voted.html:10
 #, python-format
@@ -55,11 +55,11 @@ msgstr "Envoyer le lien de validation à nouveau"
 msgid "GeoKrety Mascot name"
 msgstr "Nom de la mascotte GeoKrety"
 
-#: app/templates/base.html:46
+#: app/templates/base.html:47
 msgid "A question?"
 msgstr "Une question ?"
 
-#: app/templates/base.html:47
+#: app/templates/base.html:48
 msgid "Contact us"
 msgstr "Contactez-nous"
 
@@ -71,73 +71,73 @@ msgstr "Maintenant, vérifiez vos mails"
 msgid "and click the validation link."
 msgstr "et cliquez sur le lien de validation."
 
-#: app/templates/index.html:6
+#: app/templates/index.html:27
 msgid "Do you know the GeoKrety mascot name?"
 msgstr "Connaissez-vous le nom de la mascotte GeoKrety ?"
 
-#: app/templates/index.html:7
+#: app/templates/index.html:28
 msgid "No? Normal, It doesn't have one yet!"
 msgstr "Non ? Normal, elle n'en a pas encore !"
 
-#: app/templates/index.html:19
+#: app/templates/index.html:40
 msgid "We need your opinion to choose one!"
 msgstr "Nous avons besoin de votre avis pour en choisir un !"
 
-#: app/templates/index.html:20
+#: app/templates/index.html:41
 msgid "GeoKrety is nothing without you, and as a community we hear your voice. Make GeoKrety yours and vote for your favorite name!"
 msgstr "GeoKrety n’est rien sans vous, et en tant que communauté nous entendons votre voix. Appropriez-vous les GeoKrety et votez pour votre nom préféré !"
 
-#: app/templates/index.html:21
+#: app/templates/index.html:42
 msgid "I want to vote!"
 msgstr "Je veux voter !"
 
-#: app/templates/index.html:28
+#: app/templates/index.html:49
 msgid "Take part to the poll."
 msgstr "Participer au sondage."
 
-#: app/templates/index.html:30
+#: app/templates/index.html:51
 msgid "The vote will take place in three steps."
 msgstr "Le vote se déroulera en trois étapes."
 
-#: app/templates/index.html:32
+#: app/templates/index.html:53
 msgid "We collect your suggestions"
 msgstr "Nous collectons vos propositions"
 
-#: app/templates/index.html:33
+#: app/templates/index.html:54
 msgid "A comitee will elect 5 of your suggestions"
 msgstr "Un Comité élira 5 de vos suggestions"
 
-#: app/templates/index.html:34
+#: app/templates/index.html:55
 msgid "You vote for your prefered name"
 msgstr "Vous votez pour votre nom préféré"
 
-#: app/templates/index.html:43
+#: app/templates/index.html:63
 msgid "Vote"
 msgstr "Voter"
 
-#: app/templates/index.html:45
+#: app/templates/index.html:64
 #, python-format
 msgid "By %(username)s"
 msgstr "Par %(username)s"
 
-#: app/templates/index.html:52 app/templates/index.html:63
+#: app/templates/index.html:71 app/templates/index.html:81
 msgid "Want to suggest something else?"
 msgstr "Vous voulez proposer quelque chose d’autre ?"
 
-#: app/templates/index.html:72
+#: app/templates/index.html:90
 msgid "Other community poll"
 msgstr "Autre sondage communautaire"
 
-#: app/templates/index.html:73
+#: app/templates/index.html:91
 msgid "We are also looking for your help for designing a nice official KretyCoin to celebrate our 10th anniversary."
 msgstr "Nous avons également besoin de votre aide pour concevoir un joli KretyCoin officiel afin de célébrer notre 10ème anniversaire."
 
-#: app/templates/index.html:74
+#: app/templates/index.html:92
 msgid "Let me give my opinion"
 msgstr "Je veux donner mon avis"
 
-#: app/templates/no-such-token.html:2
-msgid "An error occured while saving you vote."
+#: app/templates/no-such-token.html:2 app/templates/saving-vote-error.html:2
+msgid "An error occurred while saving your vote."
 msgstr "Une erreur s’est produite lors de l'enregistrement de votre vote."
 
 #: app/templates/no-such-token.html:4
@@ -180,6 +180,10 @@ msgstr "Nom d’utilisateur"
 msgid "Your email:"
 msgstr "Votre adresse email:"
 
+#: app/templates/propose-name.html:23 app/templates/vote.html:8
+msgid "you@provider.net"
+msgstr "vous@fournisseur.net"
+
 #: app/templates/propose-name.html:27
 msgid "Suggest"
 msgstr "Suggérer"
@@ -197,17 +201,13 @@ msgid "Your suggestion is now waiting for moderation."
 msgstr "Votre suggestion est maintenant en attente de modération."
 
 #: app/templates/saving-propose-error.html:2
-msgid "An error occured while saving your suggestion."
+msgid "An error occurred while saving your suggestion."
 msgstr "Une erreur s’est produite lors de l’enregistrement de votre suggestion."
 
 #: app/templates/saving-propose-error.html:4
 #: app/templates/saving-vote-error.html:4
 msgid "Please try again later."
 msgstr "Veuillez réessayer ultérieurement."
-
-#: app/templates/saving-vote-error.html:2
-msgid "An error occured while saving your vote."
-msgstr "Une erreur s’est produite lors de l'enregistrement de votre vote."
 
 #: app/templates/send-confirmation-subject.html:1
 msgid "GeoKrety - Confirm your vote"
@@ -262,10 +262,6 @@ msgstr "Vous voulez m’appeler <q>%(name)s</q>"
 #: app/templates/vote.html:6
 msgid "Please enter your email and click the link in the mail you will receive to validate your choice."
 msgstr "Veuillez entrer votre email et cliquer sur le lien dans le mail que vous recevrez afin de valider votre choix."
-
-#: app/templates/vote.html:8
-msgid "you@provider.net"
-msgstr "vous@fournisseur.net"
 
 #: app/templates/vote.html:10
 msgid "Send me the validation link"

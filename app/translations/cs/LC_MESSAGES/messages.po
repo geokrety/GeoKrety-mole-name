@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: geokrety\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-11-06 22:50+0000\n"
-"PO-Revision-Date: 2018-09-23 17:48\n"
+"POT-Creation-Date: 2018-09-24 17:09+0000\n"
+"PO-Revision-Date: 2018-09-24 17:13\n"
 "Last-Translator: geokrety <geokrety@gmail.com>\n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
+"Generated-By: Babel 2.5.3\n"
 "Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 3;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: geokrety\n"
@@ -31,7 +31,7 @@ msgstr "Už jste hlasovali"
 
 #: app/templates/already-voted.html:5
 #, python-format
-msgid "for <q>%(name)s</q> on %(vote_datetime)s"
+msgid "for <q>%(name)s</q> on %(vote_date)s at %(vote_time)s"
 msgstr ""
 
 #: app/templates/already-voted.html:10
@@ -45,7 +45,7 @@ msgstr "Ano, změnit můj hlas"
 
 #: app/templates/already-voted.html:20
 msgid "Be careful you didn't validate your vote!"
-msgstr ""
+msgstr "Pozor, váš hlas stále nebyl potvrzen!"
 
 #: app/templates/already-voted.html:22
 msgid "Send validation link again"
@@ -53,165 +53,165 @@ msgstr "Znovu poslat kontrolní odkaz"
 
 #: app/templates/base.html:9
 msgid "GeoKrety Mascot name"
-msgstr ""
-
-#: app/templates/base.html:46
-msgid "A question?"
-msgstr ""
+msgstr "Jméno maskota GeoKrety"
 
 #: app/templates/base.html:47
+msgid "A question?"
+msgstr "Máte otázky?"
+
+#: app/templates/base.html:48
 msgid "Contact us"
-msgstr ""
+msgstr "Napište nám"
 
 #: app/templates/check-your-mails.html:2
 msgid "Now, check your mails"
-msgstr ""
+msgstr "Zkontrolujte, prosím, vaši e-mailovou schránku"
 
 #: app/templates/check-your-mails.html:4
 msgid "and click the validation link."
-msgstr ""
+msgstr "a klikněte na odkaz pro ověření."
 
-#: app/templates/index.html:6
+#: app/templates/index.html:27
 msgid "Do you know the GeoKrety mascot name?"
-msgstr ""
+msgstr "Znáte jméno maskota GeoKrety?"
 
-#: app/templates/index.html:7
+#: app/templates/index.html:28
 msgid "No? Normal, It doesn't have one yet!"
-msgstr ""
+msgstr "Ne? V pořádku, on totiž ještě žádné nemá!"
 
-#: app/templates/index.html:19
+#: app/templates/index.html:40
 msgid "We need your opinion to choose one!"
-msgstr ""
+msgstr "Potřebujeme váš názor, abychom mohli nějaké vybrat!"
 
-#: app/templates/index.html:20
+#: app/templates/index.html:41
 msgid "GeoKrety is nothing without you, and as a community we hear your voice. Make GeoKrety yours and vote for your favorite name!"
 msgstr ""
 
-#: app/templates/index.html:21
+#: app/templates/index.html:42
 msgid "I want to vote!"
-msgstr ""
+msgstr "Chci hlasovat!"
 
-#: app/templates/index.html:28
+#: app/templates/index.html:49
 msgid "Take part to the poll."
-msgstr ""
+msgstr "Zúčastněte se ankety."
 
-#: app/templates/index.html:30
+#: app/templates/index.html:51
 msgid "The vote will take place in three steps."
-msgstr ""
+msgstr "Hlasování bude rozděleno do tří fází."
 
-#: app/templates/index.html:32
+#: app/templates/index.html:53
 msgid "We collect your suggestions"
-msgstr ""
+msgstr "Sbíráme vaše nápady"
 
-#: app/templates/index.html:33
+#: app/templates/index.html:54
 msgid "A comitee will elect 5 of your suggestions"
-msgstr ""
+msgstr "Výbor vybere 5 z vašich návrhů"
 
-#: app/templates/index.html:34
+#: app/templates/index.html:55
 msgid "You vote for your prefered name"
-msgstr ""
+msgstr "Vy vybíráte ten nejlepší"
 
-#: app/templates/index.html:43
+#: app/templates/index.html:63
 msgid "Vote"
-msgstr ""
+msgstr "Hlasovat"
 
-#: app/templates/index.html:45
+#: app/templates/index.html:64
 #, python-format
 msgid "By %(username)s"
-msgstr ""
+msgstr "Od %(username)s"
 
-#: app/templates/index.html:52 app/templates/index.html:63
+#: app/templates/index.html:71 app/templates/index.html:81
 msgid "Want to suggest something else?"
-msgstr ""
+msgstr "Máte lepší nápad?"
 
-#: app/templates/index.html:72
+#: app/templates/index.html:90
 msgid "Other community poll"
-msgstr ""
+msgstr "Další anketa"
 
-#: app/templates/index.html:73
+#: app/templates/index.html:91
 msgid "We are also looking for your help for designing a nice official KretyCoin to celebrate our 10th anniversary."
-msgstr ""
+msgstr "Také bychom chtěli pomoc s designem oficiálního KretyCoinu na oslavu desátého výročí."
 
-#: app/templates/index.html:74
+#: app/templates/index.html:92
 msgid "Let me give my opinion"
-msgstr ""
+msgstr "Chci sdělit svůj názor"
 
-#: app/templates/no-such-token.html:2
-msgid "An error occured while saving you vote."
-msgstr ""
+#: app/templates/no-such-token.html:2 app/templates/saving-vote-error.html:2
+msgid "An error occurred while saving your vote."
+msgstr "Došlo k chybě při ukládání vašeho hlasu."
 
 #: app/templates/no-such-token.html:4
 msgid "Invalid token."
-msgstr ""
+msgstr "Neplatný token."
 
 #: app/templates/propose-name.html:2
 msgid "You have another idea?"
-msgstr ""
+msgstr "Máte další nápad?"
 
 #: app/templates/propose-name.html:4
 msgid "Don't hesitate to submit your favorite and cute name."
-msgstr ""
+msgstr "Neváhejte a odešlete své oblíbené roztomilé jméno."
 
 #: app/templates/propose-name.html:7
 msgid "The name must not be offensive"
-msgstr ""
+msgstr "Název nesmí být urážlivý"
 
 #: app/templates/propose-name.html:8 app/templates/single.html:8
 msgid "The name must contains letters <q>G</q> and <q>K</q> in that order"
-msgstr ""
+msgstr "Název musí obsahovat písmena <q>G</q> a <q>K</q> v tomto pořadí"
 
 #: app/templates/propose-name.html:14
 msgid "I suggest as the mascot name:"
-msgstr ""
+msgstr "Navrhuji jako jméno maskota:"
 
 #: app/templates/propose-name.html:15
 msgid "Some name"
-msgstr ""
+msgstr "Váš návrh"
 
 #: app/templates/propose-name.html:18
 msgid "Your username:"
-msgstr ""
+msgstr "Vaše jméno (přezdívka):"
 
 #: app/templates/propose-name.html:19
 msgid "Username"
-msgstr ""
+msgstr "Jméno"
 
 #: app/templates/propose-name.html:22
 msgid "Your email:"
-msgstr ""
+msgstr "Váš e-mail:"
+
+#: app/templates/propose-name.html:23 app/templates/vote.html:8
+msgid "you@provider.net"
+msgstr "you@example.com"
 
 #: app/templates/propose-name.html:27
 msgid "Suggest"
-msgstr ""
+msgstr "Odeslat návrh"
 
 #: app/templates/propose-name.html:29 app/templates/vote.html:12
 msgid "Your mail address will only be used to validate your vote, we will never share it with other parties."
-msgstr ""
+msgstr "Vaše e-mailová adresa bude použita pouze pro ověření vašeho hlasu, v žádném případě ji nebudeme sdílet s nikým dalším."
 
 #: app/templates/saving-for-review.html:2
 msgid "Thanks!"
-msgstr ""
+msgstr "Děkujeme!"
 
 #: app/templates/saving-for-review.html:4
 msgid "Your suggestion is now waiting for moderation."
-msgstr ""
+msgstr "Váš návrh nyní čeká na schválení."
 
 #: app/templates/saving-propose-error.html:2
-msgid "An error occured while saving your suggestion."
-msgstr ""
+msgid "An error occurred while saving your suggestion."
+msgstr "Došlo k chybě při ukládání vašeho návrhu."
 
 #: app/templates/saving-propose-error.html:4
 #: app/templates/saving-vote-error.html:4
 msgid "Please try again later."
-msgstr ""
-
-#: app/templates/saving-vote-error.html:2
-msgid "An error occured while saving your vote."
-msgstr ""
+msgstr "Zkuste to prosím později."
 
 #: app/templates/send-confirmation-subject.html:1
 msgid "GeoKrety - Confirm your vote"
-msgstr ""
+msgstr "GeoKrety - potvrďte váš hlas"
 
 #: app/templates/send-confirmation-text.html:1
 #, python-format
@@ -219,7 +219,10 @@ msgid "Hi!\n\n"
 "Thanks you for participating in finding our mascot a name.\n\n"
 "You have voted for \"%(name)s\"\n\n"
 "Please click (or copy/paste) this link %(url)s to validate your vote.\n"
-msgstr ""
+msgstr "Ahoj!\n\n"
+"Děkujeme za účast v anketě o název našeho maskota.\n\n"
+"Hlasoval jsi pro \"%(name)s\"\n\n"
+"Nyní ještě prosím ověřte svůj hlas navštívením tohoto odkazu: %(url)s\n"
 
 #: app/templates/send-confirmation.html:5
 #, python-format
@@ -227,39 +230,38 @@ msgid "Hi!<br>\n"
 "        Thanks you for participating in finding our mascot a name.<br>\n"
 "        You have voted for <q>%(name)s</q><br>\n"
 "        Please click to <a href=\"%(url)s\">validate your vote</a>."
-msgstr ""
+msgstr "Ahoj!<br>\n"
+"        Děkujeme za účast v anketě o název našeho maskota.<br>\n"
+"        Hlasoval jsi pro <q>%(name)s</q><br>\n"
+"        Nyní ještě prosím <a href=\"%(url)s\">ověřte svůj hlas</a>."
 
 #: app/templates/single.html:6
 msgid "Please fill all fields"
-msgstr ""
+msgstr "Vyplňte prosím všechna pole"
 
 #: app/templates/single.html:14
 msgid "Back Home"
-msgstr ""
+msgstr "Zpět na úvodní stránku"
 
 #: app/templates/validate.html:2
 msgid "Thank you!"
-msgstr ""
+msgstr "Děkujeme!"
 
 #: app/templates/validate.html:4
 msgid "Your vote has been registered."
-msgstr ""
+msgstr "Váš hlas byl započítán."
 
 #: app/templates/vote.html:2
 msgid "You're one step close to finish."
-msgstr ""
+msgstr "Už jen krůček."
 
 #: app/templates/vote.html:4
 #, python-format
 msgid "You want to call me <q>%(name)s</q>"
-msgstr ""
+msgstr "Navrhuješ říkat mi <q>%(name)s</q>"
 
 #: app/templates/vote.html:6
 msgid "Please enter your email and click the link in the mail you will receive to validate your choice."
-msgstr ""
-
-#: app/templates/vote.html:8
-msgid "you@provider.net"
 msgstr ""
 
 #: app/templates/vote.html:10
