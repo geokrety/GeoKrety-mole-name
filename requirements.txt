@@ -3,4 +3,4 @@ gunicorn==19.9.0
 db-sqlite3==0.0.1
 -e git+https://github.com/romain-dartigues/python-ihih.git#egg=ihih
 Flask-Babel==0.11.2
-setuptools==40.4.3
+setuptools==40.6.1
