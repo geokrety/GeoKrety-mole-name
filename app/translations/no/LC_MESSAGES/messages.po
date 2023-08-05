@@ -271,4 +271,3 @@ msgstr "you@provider.net"
 #: app/templates/vote.html:10
 msgid "Send me the validation link"
 msgstr "Send meg bekreftelseslenken"
-

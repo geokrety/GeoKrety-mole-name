@@ -266,4 +266,3 @@ msgstr "Veuillez entrer votre email et cliquer sur le lien dans le mail que vous
 #: app/templates/vote.html:10
 msgid "Send me the validation link"
 msgstr "M’envoyer le lien de validation"
-

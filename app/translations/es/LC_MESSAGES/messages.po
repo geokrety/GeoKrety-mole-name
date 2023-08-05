@@ -271,4 +271,3 @@ msgstr "tu@proveedor.net"
 #: app/templates/vote.html:10
 msgid "Send me the validation link"
 msgstr "Envíame el enlace de validación"
-

@@ -265,4 +265,3 @@ msgstr ""
 #: app/templates/vote.html:10
 msgid "Send me the validation link"
 msgstr ""
-
