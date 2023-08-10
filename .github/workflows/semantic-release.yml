@@ -7,7 +7,6 @@ on:
 
 jobs:
   release:
-    if: "!contains(github.event.head_commit.message, 'skip ci')"
     runs-on: ubuntu-latest
     permissions:
       contents: write # to be able to publish a GitHub release
